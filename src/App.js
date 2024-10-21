@@ -104,6 +104,10 @@ function App() {
             <button onClick={() => setActiveSection('Bio')} className="link-button">Bio</button>
             <button onClick={() => setActiveSection('Photos')} className="link-button">Photos</button>
             <button onClick={() => setActiveSection('Videos')} className="link-button">Videos</button>
+            {/* GitHub Link Button */}
+            <a href="https://github.com/wgolden117" target="_blank" rel="noopener noreferrer">
+              <button className="link-button">GitHub</button>
+            </a>
           </div>
 
           {activeSection === 'Bio' && (
