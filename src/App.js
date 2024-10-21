@@ -49,7 +49,7 @@ function App() {
       <div className="App">
         <header className="App-header">
           <h1>About Me</h1>
-          <img src={`${process.env.PUBLIC_URL}/about-me-page/20240122_103005.jpg`} alt="Weronika Golden" className="profile-photo"/>
+          <img src={`${process.env.PUBLIC_URL}/20240122_103005.jpg`} alt="Weronika Golden" className="profile-photo"/>
 
           <p className="small-text">
             Hello! My name is Weronika Golden. I’m a software engineering student at Arizona State University, with a
@@ -117,23 +117,23 @@ function App() {
           {activeSection === 'Photos' && (
               <div className="photo-gallery">
                 <h2>Photos</h2>
-                <img src={`${process.env.PUBLIC_URL}/about-me-page/20230819_115821.jpg`} alt="Tetons"
+                <img src={`${process.env.PUBLIC_URL}/20230819_115821.jpg`} alt="Tetons"
                      className="clickable-image square-photo"/>
-                <img src={`${process.env.PUBLIC_URL}/about-me-page/20230817_160651.jpg`} alt="Tetons-hiking"
+                <img src={`${process.env.PUBLIC_URL}/20230817_160651.jpg`} alt="Tetons-hiking"
                      className="clickable-image square-photo"/>
-                <img src={`${process.env.PUBLIC_URL}/about-me-page/IMG_20220817_162247.jpg`} alt="Tetons-Horseback Riding"
+                <img src={`${process.env.PUBLIC_URL}/IMG_20220817_162247.jpg`} alt="Tetons-Horseback Riding"
                      className="clickable-image square-photo"/>
-                <img src={`${process.env.PUBLIC_URL}/about-me-page/IMG_20230129_193532.jpg`} alt="Snowboarding"
+                <img src={`${process.env.PUBLIC_URL}/IMG_20230129_193532.jpg`} alt="Snowboarding"
                      className="clickable-image square-photo"/>
-                <img src={`${process.env.PUBLIC_URL}/about-me-page/IMG_20230129_193537.jpg`} alt="Snowboarding-Powder Mountain"
+                <img src={`${process.env.PUBLIC_URL}/IMG_20230129_193537.jpg`} alt="Snowboarding-Powder Mountain"
                      className="clickable-image square-photo"/>
-                <img src={`${process.env.PUBLIC_URL}/about-me-page/SunDown.jpg`} alt="Top of Sundown lift - Powder Mountain"
+                <img src={`${process.env.PUBLIC_URL}/SunDown.jpg`} alt="Top of Sundown lift - Powder Mountain"
                      className="clickable-image square-photo"/>
-                <img src={`${process.env.PUBLIC_URL}/about-me-page/20240627_105335.jpg`} alt="Our Kitties"
+                <img src={`${process.env.PUBLIC_URL}/20240627_105335.jpg`} alt="Our Kitties"
                      className="clickable-image square-photo"/>
-                <img src={`${process.env.PUBLIC_URL}/about-me-page/GreenKnitSweater.jpg`} alt="Green Knit Sweater I made"
+                <img src={`${process.env.PUBLIC_URL}/GreenKnitSweater.jpg`} alt="Green Knit Sweater I made"
                      className="clickable-image square-photo"/>
-                <img src={`${process.env.PUBLIC_URL}/about-me-page/BlueKnitSweater.jpg`} alt="Blue Purl Knit Crop-top Sweater I made"
+                <img src={`${process.env.PUBLIC_URL}/BlueKnitSweater.jpg`} alt="Blue Purl Knit Crop-top Sweater I made"
                      className="clickable-image square-photo"/>
               </div>
           )}
@@ -142,11 +142,11 @@ function App() {
               <div className="videos-section">
                 <h2>Videos</h2>
                 <video width="600" height="600" controls>
-                  <source src={`${process.env.PUBLIC_URL}/about-me-page/steel.mp4`} type="video/mp4"/>
+                  <source src={`${process.env.PUBLIC_URL}/steel.mp4`} type="video/mp4"/>
                   Your browser does not support the video tag.
                 </video>
                 <video width="600" height="600" controls>
-                  <source src={`${process.env.PUBLIC_URL}/about-me-page/USPSA.mp4`} type="video/mp4"/>
+                  <source src={`${process.env.PUBLIC_URL}/USPSA.mp4`} type="video/mp4"/>
                   Your browser does not support the video tag.
                 </video>
               </div>
@@ -154,7 +154,6 @@ function App() {
         </header>
       </div>
   );
-
 }
 
 export default App;
