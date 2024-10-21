@@ -8,9 +8,9 @@ html, body {
 .App {
   text-align: center;
   background-image: url('/public/background.jpg'); /* Use your image path */
-  background-size: 100% 100%; /* Stretches the image to fill both width and height */
-  background-position: center center;
-  background-repeat: no-repeat;
+  background-size: cover; /* Fills the screen, but will crop parts of the image */
+  background-position: center center; /* Centers the image */
+  background-repeat: no-repeat; /* Ensures the image doesn't repeat */
   min-height: 100vh;
 }
 
