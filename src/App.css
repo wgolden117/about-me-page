@@ -40,7 +40,7 @@ body {
 @media (max-width: 768px) {
   .App {
     background-size: contain; /* Ensures the whole image is visible on mobile */
-    background-position: center center; /* Keeps the image centered on small screens */
+    background-position: top center; /* Keeps the image centered on small screens */
     background-attachment: scroll; /* Mobile devices handle fixed poorly */
   }
 
@@ -61,7 +61,7 @@ body {
   @media (min-width: 769px) {
     .App {
       background-size: contain; /* Ensures the whole image is always visible */
-      background-position: center center;
+      background-position: top center;
     }
   }
 
