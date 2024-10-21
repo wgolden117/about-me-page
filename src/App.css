@@ -35,6 +35,33 @@ body {
   overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .App {
+    background-size: cover; /* Make sure background covers the screen */
+    background-position: top center;
+  }
+
+  .small-text {
+    font-size: 14px;
+  }
+
+  .link-button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .square-photo {
+    width: 100%; /* Make the photo adjust to screen size */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+
 /* Add this part to style the profile photo */
 .profile-photo {
   width: 150px; /* Adjust this as necessary */
@@ -73,6 +100,7 @@ body {
 .link-button:hover {
   text-decoration: underline;
 }
+
 .bio-section,
 .photos-section,
 .videos-section {
