@@ -36,14 +36,6 @@ body {
   overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-/* Media query for mobile devices */
-@media (max-width: 768px) {
-  .App {
-    background-size: contain; /* Ensures the whole image is visible on mobile */
-    background-position: top center; /* Keeps the image centered on small screens */
-    background-attachment: scroll; /* Mobile devices handle fixed poorly */
-  }
-
   .small-text {
     font-size: 14px;  /* Make text smaller for mobile */
   }
@@ -58,10 +50,24 @@ body {
     height: auto;
   }
 
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .App {
+    background-size: contain; /* Ensures the whole image is visible on mobile */
+    background-position: top center; /* Keeps the image centered on small screens */
+    background-attachment: scroll; /* Mobile devices handle fixed poorly */
+  }
+
   @media (min-width: 769px) {
     .App {
       background-size: contain; /* Ensures the whole image is always visible */
       background-position: top center;
+    }
+  }
+  @media (max-width: 768px) {
+    .videos-section video {
+      width: 100%; /* Make the video take full width of the screen */
+      height: auto; /* Automatically adjust the height to keep aspect ratio */
     }
   }
 
