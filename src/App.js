@@ -13,8 +13,8 @@ function App() {
     }
   };
 
-  // Function to scroll to the top of the page
   const scrollToTop = () => {
+    document.body.classList.add('scrollable');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 

@@ -4,7 +4,6 @@ html, body {
   height: 100%;
   width: 100%;
   background-color: #000; /* Fills the background with black (or any color you prefer) */
-  overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 .App {
@@ -33,7 +32,10 @@ html, body {
 
 body {
   overflow-y: scroll; /* Always show vertical scrollbar */
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.scrollable {
+  overflow: auto;
 }
 
   .small-text {
