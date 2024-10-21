@@ -2,28 +2,31 @@ import React, {useEffect, useRef} from 'react';
 import './App.css';
 
 function App() {
+  // Create references to different sections of the page to allow scrolling to them
   const bioRef = useRef(null);
   const photosRef = useRef(null);
   const videosRef = useRef(null);
 
-  // Function to scroll to a section and delay the scroll to ensure the section is fully rendered
+  // Function to scroll to a specific section smoothly
   const scrollToSection = (ref) => {
     if (ref && ref.current) {
       ref.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
+ // Function to scroll the page to the top smoothly
   const scrollToTop = () => {
-    document.body.classList.add('scrollable');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    document.body.classList.add('scrollable'); // Ensure body can scroll
+    window.scrollTo({ top: 0, behavior: 'smooth' }); // Smooth scroll to top
   };
 
-  // Modal functionality setup (set up once when component mounts)
+  // Setup modal functionality for viewing images in larger size
   useEffect(() => {
     const modal = document.getElementById("imageModal");
     const modalImg = document.getElementById("modalImage");
     const captionText = document.getElementById("caption");
 
+    // Add event listeners to all images with the class "clickable-image" to open them in a modal
     const images = document.querySelectorAll(".clickable-image");
     if (images.length > 0) {
       images.forEach((image) => {
@@ -31,28 +34,32 @@ function App() {
           modal.style.display = "block";
           modalImg.src = this.src;
           modalImg.alt = this.alt;
-          captionText.innerHTML = this.alt;
+          captionText.innerHTML = this.alt; // Set image caption
         };
       });
 
+      // Close modal on clicking the close button
       const span = document.getElementsByClassName("close")[0];
       span.onclick = function () {
-        modal.style.display = "none";
+        modal.style.display = "none"; // Close modal on click
       };
 
+      // Close the modal if user clicks outside the modal content
       window.onclick = function (event) {
         if (event.target === modal) {
           modal.style.display = "none";
         }
       };
     }
-  }, []); // Set up the modal functionality once
+  }, []); // Runs only once when the component mounts to set up modal functionality
 
+  // Set up sparkle effect for visual enhancement
   useEffect(() => {
     const sparkleContainer = document.createElement('div');
     sparkleContainer.classList.add('sparkle-twinkle');
     document.querySelector('.App').appendChild(sparkleContainer);
 
+    // Create and position multiple sparkle stars randomly
     for (let i = 0; i < 50; i++) {
       const star = document.createElement('div');
       star.classList.add('sparkle-star');
@@ -64,7 +71,7 @@ function App() {
 
       sparkleContainer.appendChild(star);
     }
-  }, []);
+  }, []); // Runs only once to set up the sparkle effect
 
   return (
       <div className="App">
