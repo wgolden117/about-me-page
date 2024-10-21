@@ -73,6 +73,14 @@ function App() {
             <div id="caption"></div>
           </div>
 
+          <div className="sparkle-twinkle">
+            <div className="sparkle-star"></div>
+            <div className="sparkle-star"></div>
+            <div className="sparkle-star"></div>
+            <div className="sparkle-star"></div>
+            <div className="sparkle-star"></div>
+          </div>
+
           {/* Section Links */}
           <div>
             <button onClick={() => setActiveSection('Bio')} className="link-button">Bio</button>
