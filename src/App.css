@@ -39,8 +39,9 @@ body {
 /* Media query for mobile devices */
 @media (max-width: 768px) {
   .App {
-    background-size: contain; /* Make sure background covers the screen */
-    background-position: top center;
+    background-size: contain; /* Ensures the whole image is visible on mobile */
+    background-position: center center; /* Keeps the image centered on small screens */
+    background-attachment: scroll; /* Mobile devices handle fixed poorly */
   }
 
   .small-text {
@@ -55,6 +56,13 @@ body {
   img {
     max-width: 100%;
     height: auto;
+  }
+
+  @media (min-width: 769px) {
+    .App {
+      background-size: contain; /* Ensures the whole image is always visible */
+      background-position: center center;
+    }
   }
 
   .square-photo {
@@ -195,8 +203,8 @@ body {
 /* Small subtle stars */
 .sparkle-star {
   position: absolute;
-  width: 2px;
-  height: 2px;
+  width: 3px;
+  height: 3px;
   background-color: white;
   border-radius: 50%;
   animation: sparkleTwinkle 3s infinite;
@@ -228,4 +236,22 @@ body {
   top: 85%;
   left: 10%;
   animation-duration: 3.5s;
+}
+
+.sparkle-star:nth-child(6) {
+  top: 85%;
+  left: 10%;
+  animation-duration: 3.5s;
+}
+
+.sparkle-star:nth-child(7) {
+  top: 85%;
+  left: 10%;
+  animation-duration: 2.5s;
+}
+
+.sparkle-star:nth-child(8) {
+  top: 85%;
+  left: 10%;
+  animation-duration: 2s;
 }
