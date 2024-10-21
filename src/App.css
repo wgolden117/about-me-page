@@ -127,22 +127,23 @@ body {
 }
 
 .photo-gallery {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   width: 100%;
-  overflow: visible;
-  margin-top: 20px; /* Adds space above the photo gallery */
+  overflow: hidden;
+  margin-top: 20px;
 }
 
 .photo-gallery img {
-  transition: transform 0.3s ease; /* Smooth zoom-in effect */
-  width: 400px; /* Set a specific width */
-  height: 300px; /* Maintain aspect ratio */
-  max-width: 100%; /* Prevent images from overflowing their container */
+  transition: transform 0.3s ease;
+  width: 400px;
+  height: 300px;
+  max-width: 100%;
   cursor: pointer;
   display: block;
-  margin: 10px auto; /* Center images and add some space around them */
+  margin: 10px auto;
 }
-
 
 .photo-gallery img:hover {
   transform: scale(1.2); /* Zoom in by 20% */

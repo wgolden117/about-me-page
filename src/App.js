@@ -9,9 +9,7 @@ function App() {
   // Function to scroll to a section and delay the scroll to ensure the section is fully rendered
   const scrollToSection = (ref) => {
     if (ref && ref.current) {
-      setTimeout(() => {
-        ref.current.scrollIntoView({ behavior: 'smooth' });
-      }, 100); // Delay by 100ms to ensure section is fully rendered
+      ref.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
