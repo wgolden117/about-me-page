@@ -49,7 +49,7 @@ function App() {
       <div className="App">
         <header className="App-header">
           <h1>About Me</h1>
-          <img src="/20240122_103005.jpg" alt="Weronika Golden" className="profile-photo"/>
+          <img src={`${process.env.PUBLIC_URL}/20240122_103005.jpg`} alt="Weronika Golden" className="profile-photo"/>
 
           <p className="small-text">
             Hello! My name is Weronika Golden. I’m a software engineering student at Arizona State University, with a
