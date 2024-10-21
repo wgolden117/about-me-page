@@ -1,8 +1,21 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import './App.css';
 
 function App() {
-  const [activeSection, setActiveSection] = useState(null);
+  const [activeSection] = useState(null);
+  // Create refs for each section
+  const bioRef = useRef(null);
+  const photosRef = useRef(null);
+  const videosRef = useRef(null);
+
+  // Function to scroll to a section
+  const scrollToSection = (ref) => {
+    if (ref && ref.current) {
+      ref.current.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      console.error("Ref not found or undefined", ref);
+    }
+  };
 
   // Modal Functionality Setup
   useEffect(() => {
@@ -93,94 +106,85 @@ function App() {
 
           <div className="sparkle-twinkle">
             <div className="sparkle-star"></div>
-            <div className="sparkle-star"></div>
-            <div className="sparkle-star"></div>
-            <div className="sparkle-star"></div>
-            <div className="sparkle-star"></div>
           </div>
 
-          {/* Section Links */}
+          {/* Links that trigger scrolling */}
           <div>
-            <button onClick={() => setActiveSection('Bio')} className="link-button">Bio</button>
-            <button onClick={() => setActiveSection('Photos')} className="link-button">Photos</button>
-            <button onClick={() => setActiveSection('Videos')} className="link-button">Videos</button>
+            <button onClick={() => scrollToSection(bioRef)} className="link-button">Bio</button>
+            <button onClick={() => scrollToSection(photosRef)} className="link-button">Photos</button>
+            <button onClick={() => scrollToSection(videosRef)} className="link-button">Videos</button>
+
             {/* GitHub Link Button */}
             <a href="https://github.com/wgolden117" target="_blank" rel="noopener noreferrer">
               <button className="link-button">GitHub</button>
             </a>
           </div>
 
-          {activeSection === 'Bio' && (
-              <div className="bio-section">
-                <h2>Detailed Bio</h2>
-                {/* More detailed bio here */}
-                <p className="small-text">
-                  I first attended Arizona State University after obtaining my Associates Degree from
-                  my local Community College. From ASU, I graduated with a BS in Criminology and Criminal Justice,
-                  Summa Cum Laude, in 2018.
-                </p>
-                <p className="small-text">
-                  I worked and went to school throughout my time working towards my Associates and BS Degree.
-                  After graduating, I continued working in my current position in accounts payable. Later,
-                  I also worked in customer service and sales.
-                </p>
-                <p className="small-text">
-                  Originally I'm from Chicago. I grew up there, and lived in the Suburbs until my early 20s.
-                  Then, my husband and I moved to Ogden, Utah due to a work promotion. About 4 years later
-                  we moved to Post Falls, ID where we currently live with our three beloved cats.
-                </p>
-                <p className="small-text">
-                  Throughout my working career, I discovered a passion for programming, and decided to go back to
-                  school.
-                  I am now working towards my second BS, this time in Software Engineering. I decided to work towards
-                  a second BS instead of a Masters because the BS is accredited by the Fulton School of Engineering
-                  with ASU.
-                </p>
-                <p className="small-text">
-                  My personal hobbies include competitive shooting as part of the United States Practical Shooting
-                  Association, snowboarding, playing the piano and violin, knitting, and gaming. I also love the
-                  outdoors and love to camp and hike!
-                </p>
-              </div>
-          )}
+          <section ref={bioRef} className="bio-section">
+            <h2>Detailed Bio</h2>
+            {/* More detailed bio here */}
+            <p className="small-text">
+              I first attended Arizona State University after obtaining my Associates Degree from
+              my local Community College. From ASU, I graduated with a BS in Criminology and Criminal Justice,
+              Summa Cum Laude, in 2018.
+            </p>
+            <p className="small-text">
+              I worked and went to school throughout my time working towards my Associates and BS Degree.
+              After graduating, I continued working in my current position in accounts payable. Later,
+              I also worked in customer service and sales.
+            </p>
+            <p className="small-text">
+              Originally I'm from Chicago. I grew up there, and lived in the Suburbs until my early 20s.
+              Then, my husband and I moved to Ogden, Utah due to a work promotion. About 4 years later
+              we moved to Post Falls, ID where we currently live with our three beloved cats.
+            </p>
+            <p className="small-text">
+              Throughout my working career, I discovered a passion for programming, and decided to go back to
+              school.
+              I am now working towards my second BS, this time in Software Engineering. I decided to work towards
+              a second BS instead of a Masters because the BS is accredited by the Fulton School of Engineering
+              with ASU.
+            </p>
+            <p className="small-text">
+              My personal hobbies include competitive shooting as part of the United States Practical Shooting
+              Association, snowboarding, playing the piano and violin, knitting, and gaming. I also love the
+              outdoors and love to camp and hike!
+            </p>
+          </section>
 
-          {activeSection === 'Photos' && (
-              <div className="photo-gallery">
-                <h2>Photos</h2>
-                <img src={`${process.env.PUBLIC_URL}/20230819_115821.jpg`} alt="Tetons"
-                     className="clickable-image square-photo"/>
-                <img src={`${process.env.PUBLIC_URL}/20230817_160651.jpg`} alt="Tetons-hiking"
-                     className="clickable-image square-photo"/>
-                <img src={`${process.env.PUBLIC_URL}/IMG_20220817_162247.jpg`} alt="Tetons-Horseback Riding"
-                     className="clickable-image square-photo"/>
-                <img src={`${process.env.PUBLIC_URL}/IMG_20230129_193532.jpg`} alt="Snowboarding"
-                     className="clickable-image square-photo"/>
-                <img src={`${process.env.PUBLIC_URL}/IMG_20230129_193537.jpg`} alt="Snowboarding-Powder Mountain"
-                     className="clickable-image square-photo"/>
-                <img src={`${process.env.PUBLIC_URL}/SunDown.jpg`} alt="Top of Sundown lift - Powder Mountain"
-                     className="clickable-image square-photo"/>
-                <img src={`${process.env.PUBLIC_URL}/20240627_105335.jpg`} alt="Our Kitties"
-                     className="clickable-image square-photo"/>
-                <img src={`${process.env.PUBLIC_URL}/GreenKnitSweater.jpg`} alt="Green Knit Sweater I made"
-                     className="clickable-image square-photo"/>
-                <img src={`${process.env.PUBLIC_URL}/BlueKnitSweater.jpg`} alt="Blue Purl Knit Crop-top Sweater I made"
-                     className="clickable-image square-photo"/>
-              </div>
-          )}
+          <section ref={photosRef} className="photo-gallery">
+            <h2>Photos</h2>
+            <img src={`${process.env.PUBLIC_URL}/20230819_115821.jpg`} alt="Tetons"
+                 className="clickable-image square-photo"/>
+            <img src={`${process.env.PUBLIC_URL}/20230817_160651.jpg`} alt="Tetons-hiking"
+                 className="clickable-image square-photo"/>
+            <img src={`${process.env.PUBLIC_URL}/IMG_20220817_162247.jpg`} alt="Tetons-Horseback Riding"
+                 className="clickable-image square-photo"/>
+            <img src={`${process.env.PUBLIC_URL}/IMG_20230129_193532.jpg`} alt="Snowboarding"
+                 className="clickable-image square-photo"/>
+            <img src={`${process.env.PUBLIC_URL}/IMG_20230129_193537.jpg`} alt="Snowboarding-Powder Mountain"
+                 className="clickable-image square-photo"/>
+            <img src={`${process.env.PUBLIC_URL}/SunDown.jpg`} alt="Top of Sundown lift - Powder Mountain"
+                 className="clickable-image square-photo"/>
+            <img src={`${process.env.PUBLIC_URL}/20240627_105335.jpg`} alt="Our Kitties"
+                 className="clickable-image square-photo"/>
+            <img src={`${process.env.PUBLIC_URL}/GreenKnitSweater.jpg`} alt="Green Knit Sweater I made"
+                 className="clickable-image square-photo"/>
+            <img src={`${process.env.PUBLIC_URL}/BlueKnitSweater.jpg`} alt="Blue Purl Knit Crop-top Sweater I made"
+                 className="clickable-image square-photo"/>
+          </section>
 
-          {activeSection === 'Videos' && (
-              <div className="videos-section">
-                <h2>Videos</h2>
-                <video width="600" height="600" controls>
-                  <source src={`${process.env.PUBLIC_URL}/steel.mp4`} type="video/mp4"/>
-                  Your browser does not support the video tag.
-                </video>
-                <video width="600" height="600" controls>
-                  <source src={`${process.env.PUBLIC_URL}/USPSA.mp4`} type="video/mp4"/>
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-          )}
+          <section ref={videosRef} className="videos-section">
+            <h2>Videos</h2>
+            <video width="600" height="600" controls>
+              <source src={`${process.env.PUBLIC_URL}/steel.mp4`} type="video/mp4"/>
+              Your browser does not support the video tag.
+            </video>
+            <video width="600" height="600" controls>
+              <source src={`${process.env.PUBLIC_URL}/USPSA.mp4`} type="video/mp4"/>
+              Your browser does not support the video tag.
+            </video>
+          </section>
         </header>
       </div>
   );
