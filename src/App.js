@@ -135,7 +135,6 @@ function App() {
                      className="clickable-image square-photo"/>
                 <img src={`${process.env.PUBLIC_URL}/about-me-page/BlueKnitSweater.jpg`} alt="Blue Purl Knit Crop-top Sweater I made"
                      className="clickable-image square-photo"/>
-
               </div>
           )}
 
@@ -146,7 +145,6 @@ function App() {
                   <source src={`${process.env.PUBLIC_URL}/about-me-page/steel.mp4`} type="video/mp4"/>
                   Your browser does not support the video tag.
                 </video>
-
                 <video width="600" height="600" controls>
                   <source src={`${process.env.PUBLIC_URL}/about-me-page/USPSA.mp4`} type="video/mp4"/>
                   Your browser does not support the video tag.
