@@ -9,14 +9,14 @@ html, body {
 
 .App {
   text-align: center;
-  background-image: url('/public/background.jpg'); /* Correct path for GitHub Pages */
-  background-size: contain; /* Ensures the whole image is always visible */
-  background-position: center;
-  background-repeat: no-repeat;
+  background-image: url('/public/background.jpg'); /* Path to your background image */
+  background-size: cover; /* Ensure the background image covers the entire screen */
+  background-position: center center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
   background-attachment: fixed;
   height: 100vh; /* Full viewport height */
-  width: 100%; /* Full viewport width */
-  background-color: #000; /* Fills the empty areas with black (or any other color) */
+  width: 100%;
+  background-color: #000; /* Fills any empty space with black */
 }
 
 .App-header {
@@ -38,12 +38,12 @@ body {
 /* Media query for mobile devices */
 @media (max-width: 768px) {
   .App {
-    background-size: cover; /* Make sure background covers the screen */
+    background-size: contain; /* Make sure background covers the screen */
     background-position: top center;
   }
 
   .small-text {
-    font-size: 14px;
+    font-size: 14px;  /* Make text smaller for mobile */
   }
 
   .link-button {
