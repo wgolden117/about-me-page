@@ -87,7 +87,7 @@ function App() {
           {/* Modal */}
           <div id="imageModal" className="modal">
             <span className="close">&times;</span>
-            <img className="modal-content" id="modalImage" alt="" />
+            <img className="modal-content" id="modalImage" alt=""/>
             <div id="caption"></div>
           </div>
 
@@ -163,11 +163,11 @@ function App() {
 
           <section ref={videosRef} className="videos-section">
             <h2>Videos</h2>
-            <video width="500" height="500" controls>
+            <video width="500" height="500" controls preload="metadata" poster={`${process.env.PUBLIC_URL}/steel.jpg`}>
               <source src={`${process.env.PUBLIC_URL}/steel.mp4`} type="video/mp4"/>
               Your browser does not support the video tag.
             </video>
-            <video width="500" height="500" controls>
+            <video width="500" height="500" controls preload="metadata" poster={`${process.env.PUBLIC_URL}/USPSA.jpg`}>
               <source src={`${process.env.PUBLIC_URL}/USPSA.mp4`} type="video/mp4"/>
               Your browser does not support the video tag.
             </video>
