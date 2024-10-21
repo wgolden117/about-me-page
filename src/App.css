@@ -1,0 +1,137 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.App {
+  text-align: center;
+  background-image: url('/public/background.jpg'); /* Use your image path */
+  background-size: 100% 100%; /* Stretches the image to fill both width and height */
+  background-position: center center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.App-header {
+  background-color: transparent; /* Removes the dark gray background */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Move content to the top */
+  padding-top: 50px; /* Add some space from the top */
+  color: whitesmoke;
+}
+
+body {
+  overflow-y: scroll; /* Always show vertical scrollbar */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Add this part to style the profile photo */
+.profile-photo {
+  width: 150px; /* Adjust this as necessary */
+  height: auto; /* Adjust this as necessary */
+  border-radius: 50%; /* Makes it circular */
+  object-fit: contain; /* This ensures the entire image is visible */
+  background-color: #000000; /* Add a background color to fill any gaps */
+  margin: 20px 0;
+}
+
+.square-photo {
+  width: 300px; /* Set the desired width */
+  height: 300px; /* Set the same height to make it a square */
+  object-fit: cover; /* Ensures the image fills the square without distortion */
+  border-radius: 0; /* Keep the corners square (or set a value if you want rounded corners) */
+}
+
+.small-text {
+  font-size: 20px; /* Adjust the size here */
+  line-height: 1; /* Adjust the line spacing for readability */
+}
+
+.App-link {
+  color: whitesmoke;
+}
+
+.link-button {
+  background: none;
+  border: none;
+  color: whitesmoke;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.link-button:hover {
+  text-decoration: underline;
+}
+.bio-section,
+.photos-section,
+.videos-section {
+  margin-top: 20px;
+}
+
+.photo-gallery img {
+  transition: transform 0.3s ease; /* Smooth zoom-in effect */
+  width: 400px; /* Set a specific width */
+  height: 300px; /* Maintain aspect ratio */
+  max-width: 100%; /* Prevent images from overflowing their container */
+  cursor: pointer;
+}
+
+.photo-gallery img:hover {
+  transform: scale(1.2); /* Zoom in by 20% */
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Caption */
+#caption {
+  margin: auto;
+  display: block;
+  text-align: center;
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}

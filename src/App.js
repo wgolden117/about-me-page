@@ -1,0 +1,159 @@
+import React, { useEffect, useState } from 'react';
+import './App.css';
+
+function App() {
+  const [activeSection, setActiveSection] = useState(null);
+
+  // Modal Functionality Setup
+  useEffect(() => {
+    const setupModalFunctionality = () => {
+      // Get the modal
+      const modal = document.getElementById("imageModal");
+
+      // Get the modal image and caption text
+      const modalImg = document.getElementById("modalImage");
+      const captionText = document.getElementById("caption");
+
+      // Get all images with the class "clickable-image"
+      const images = document.querySelectorAll(".clickable-image");
+
+      if (images.length > 0) {
+        // Add click event to each image
+        images.forEach((image) => {
+          image.onclick = function () {
+            modal.style.display = "block"; // Show the modal
+            modalImg.src = this.src; // Set the modal image source to the clicked image
+            modalImg.alt = this.alt; // Set the modal image alt attribute
+            captionText.innerHTML = this.alt; // Set the caption based on the image alt text
+          };
+        });
+
+        // Get the <span> element that closes the modal
+        const span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+          modal.style.display = "none";
+        };
+
+        // Close the modal if clicked outside of it
+        window.onclick = function (event) {
+          if (event.target === modal) {
+            modal.style.display = "none";
+          }
+        };
+      } else {
+        console.error("No images with class 'clickable-image' found.");
+      }
+    };
+
+    // Run setup once the component mounts
+    setupModalFunctionality();
+  }, [activeSection]); // Run every time `activeSection` changes
+
+  return (
+      <div className="App">
+        <header className="App-header">
+          <h1>About Me</h1>
+          <img src="/20240122_103005.jpg" alt="Weronika Golden" className="profile-photo"/>
+
+          <p className="small-text">
+            Hello! My name is Weronika Golden. I’m a software engineering student at Arizona State University, with a
+            passion for developing software solutions and solving problems using technology.
+          </p>
+
+          <p className="small-text">
+            I have experience in Java, C, C++, Python, and SQL. I’ve also worked on various database management systems,
+            and in my free time, I am currently developing a connect4 game using JavaFX.
+          </p>
+
+          <p className="small-text">
+            I love exploring new technologies and working on challenging projects that allow me to expand my skill
+            set.
+          </p>
+
+          {/* Modal */}
+          <div id="imageModal" className="modal">
+            <span className="close">&times;</span>
+            <img className="modal-content" id="modalImage" alt=""/>
+            <div id="caption"></div>
+          </div>
+
+          {/* Section Links */}
+          <div>
+            <button onClick={() => setActiveSection('Bio')} className="link-button">Bio</button>
+            <button onClick={() => setActiveSection('Photos')} className="link-button">Photos</button>
+            <button onClick={() => setActiveSection('Videos')} className="link-button">Videos</button>
+          </div>
+
+          {activeSection === 'Bio' && (
+              <div className="bio-section">
+                <h2>Detailed Bio</h2>
+                {/* More detailed bio here */}
+                <p className="small-text">
+                  I first attended Arizona State University after obtaining my Associates Degree from
+                  my local Community College. From ASU, I graduated with a BS in Criminology and Criminal Justice,
+                  Summa Cum Laude, in 2018.
+                </p>
+                <p className="small-text">
+                  I worked and went to school throughout my time working towards my Associates and BS Degree.
+                  After graduating, I continued working in my current position in accounts payable. Later,
+                  I also worked in customer service and sales.
+                </p>
+                <p className="small-text">
+                  Originally I'm from Chicago. I grew up there, and lived in the Suburbs until my early 20s.
+                  Then, my husband and I moved to Ogden, Utah due to a work promotion. About 4 years later
+                  we moved to Post Falls, ID where we currently live with our three beloved cats.
+                </p>
+                <p className="small-text">
+                  Throughout my working career, I discovered a passion for programming, and decided to go back to
+                  school.
+                  I am now working towards my second BS, this time in Software Engineering. I decided to work towards
+                  a second BS instead of a Masters because the BS is accredited by the Fulton School of Engineering
+                  with ASU.
+                </p>
+                <p className="small-text">
+                  My personal hobbies include competitive shooting as part of the United States Practical Shooting
+                  Association, snowboarding, playing the piano and violin, knitting, and gaming. I also love the
+                  outdoors and love to camp and hike!
+                </p>
+              </div>
+          )}
+
+          {activeSection === 'Photos' && (
+              <div className="photo-gallery">
+                <h2>Photos</h2>
+                <img src="/20230819_115821.jpg" alt="Tetons" className="clickable-image square-photo"/>
+                <img src="/20230817_160651.jpg" alt="Tetons-hiking" className="clickable-image square-photo"/>
+                <img src="/IMG_20220817_162247.jpg" alt="Tetons-Horseback Riding" className="clickable-image square-photo"/>
+                <img src="/IMG_20230129_193532.jpg" alt="Snowboarding" className="clickable-image square-photo"/>
+                <img src="/IMG_20230129_193537.jpg" alt="Snowboarding-Powder Mountain" className="clickable-image square-photo"/>
+                <img src="/SunDown.jpg" alt="Top of Sundown lift - Powder Mountain" className="clickable-image square-photo"/>
+                <img src="/20240627_105335.jpg" alt="Our Kitties" className="clickable-image square-photo"/>
+                <img src="/GreenKnitSweater.jpg" alt="Green Knit Sweater I made" className="clickable-image square-photo"/>
+                <img src="/BlueKnitSweater.jpg" alt="Blue Purl Knit Crop-top Sweater I made" className="clickable-image square-photo"/>
+
+              </div>
+          )}
+
+          {activeSection === 'Videos' && (
+              <div className="videos-section">
+                <h2>Videos</h2>
+                <video width="600" height="600" controls>
+                  <source src="/steel.mp4" type="video/mp4"/>
+                  Your browser does not support the video tag.
+                </video>
+                {/* Add more videos as needed */}
+                <video width="600" height="600" controls>
+                  <source src="/USPSA.mp4" type="video/mp4"/>
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+          )}
+        </header>
+      </div>
+  );
+
+}
+
+export default App;
