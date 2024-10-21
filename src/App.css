@@ -120,6 +120,20 @@ body {
   text-decoration: underline;
 }
 
+.return-button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 20px auto; /* Centers the button horizontally */
+  display: block; /* Make sure it's displayed as a block element */
+}
+
+.return-button:hover {
+  background-color: #555;
+}
+
 .bio-section,
 .photos-section,
 .videos-section {
@@ -128,7 +142,7 @@ body {
 
 .photo-gallery {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column; /* Arrange items vertically */
   justify-content: center;
   width: 100%;
   overflow: hidden;

@@ -13,6 +13,11 @@ function App() {
     }
   };
 
+  // Function to scroll to the top of the page
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   // Modal functionality setup (set up once when component mounts)
   useEffect(() => {
     const modal = document.getElementById("imageModal");
@@ -135,6 +140,7 @@ function App() {
               Association, snowboarding, playing the piano and violin, knitting, and gaming. I also love the
               outdoors and love to camp and hike!
             </p>
+            <button className="return-button" onClick={scrollToTop}>Return to Top</button>
           </section>
 
           <section ref={photosRef} className="photo-gallery">
@@ -157,6 +163,7 @@ function App() {
                  className="clickable-image square-photo"/>
             <img src={`${process.env.PUBLIC_URL}/BlueKnitSweater.jpg`} alt="Blue Purl Knit Crop-top Sweater I made"
                  className="clickable-image square-photo"/>
+            <button className="return-button" onClick={scrollToTop}>Return to Top</button>
           </section>
 
           <section ref={videosRef} className="videos-section">
@@ -171,6 +178,7 @@ function App() {
               <source src={`${process.env.PUBLIC_URL}/USPSA.mp4`} type="video/mp4"/>
               Your browser does not support the video tag.
             </video>
+            <button className="return-button" onClick={scrollToTop}>Return to Top</button>
           </section>
         </header>
       </div>
