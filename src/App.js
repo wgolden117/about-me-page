@@ -6,10 +6,12 @@ function App() {
   const photosRef = useRef(null);
   const videosRef = useRef(null);
 
-  // Function to scroll to a section
+  // Function to scroll to a section and delay the scroll to ensure the section is fully rendered
   const scrollToSection = (ref) => {
     if (ref && ref.current) {
-      ref.current.scrollIntoView({ behavior: 'smooth' });
+      setTimeout(() => {
+        ref.current.scrollIntoView({ behavior: 'smooth' });
+      }, 100); // Delay by 100ms to ensure section is fully rendered
     }
   };
 
@@ -67,17 +69,17 @@ function App() {
           <h1>About Me</h1>
           <img src={`${process.env.PUBLIC_URL}/20240122_103005.jpg`} alt="Weronika Golden" className="profile-photo"/>
 
-          <p className="small-text">
+          <p className="small-text bold-text">
             Hello! My name is Weronika Golden. I’m a software engineering student at Arizona State University, with a
             passion for developing software solutions and solving problems using technology.
           </p>
 
-          <p className="small-text">
+          <p className="small-text bold-text">
             I have experience in Java, C, C++, Python, and SQL. I’ve also worked on various database management systems,
             and in my free time, I am currently developing a connect4 game using JavaFX.
           </p>
 
-          <p className="small-text">
+          <p className="small-text bold-text">
             I love exploring new technologies and working on challenging projects that allow me to expand my skill
             set.
           </p>
@@ -108,29 +110,29 @@ function App() {
           <section ref={bioRef} className="bio-section">
             <h2>Detailed Bio</h2>
             {/* More detailed bio here */}
-            <p className="small-text">
+            <p className="small-text bold-text">
               I first attended Arizona State University after obtaining my Associates Degree from
               my local Community College. From ASU, I graduated with a BS in Criminology and Criminal Justice,
               Summa Cum Laude, in 2018.
             </p>
-            <p className="small-text">
+            <p className="small-text bold-text">
               I worked and went to school throughout my time working towards my Associates and BS Degree.
               After graduating, I continued working in my current position in accounts payable. Later,
               I also worked in customer service and sales.
             </p>
-            <p className="small-text">
+            <p className="small-text bold-text">
               Originally I'm from Chicago. I grew up there, and lived in the Suburbs until my early 20s.
               Then, my husband and I moved to Ogden, Utah due to a work promotion. About 4 years later
               we moved to Post Falls, ID where we currently live with our three beloved cats.
             </p>
-            <p className="small-text">
+            <p className="small-text bold-text">
               Throughout my working career, I discovered a passion for programming, and decided to go back to
               school.
               I am now working towards my second BS, this time in Software Engineering. I decided to work towards
               a second BS instead of a Masters because the BS is accredited by the Fulton School of Engineering
               with ASU.
             </p>
-            <p className="small-text">
+            <p className="small-text bold-text">
               My personal hobbies include competitive shooting as part of the United States Practical Shooting
               Association, snowboarding, playing the piano and violin, knitting, and gaming. I also love the
               outdoors and love to camp and hike!
