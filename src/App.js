@@ -117,15 +117,24 @@ function App() {
           {activeSection === 'Photos' && (
               <div className="photo-gallery">
                 <h2>Photos</h2>
-                <img src="/20230819_115821.jpg" alt="Tetons" className="clickable-image square-photo"/>
-                <img src="/20230817_160651.jpg" alt="Tetons-hiking" className="clickable-image square-photo"/>
-                <img src="/IMG_20220817_162247.jpg" alt="Tetons-Horseback Riding" className="clickable-image square-photo"/>
-                <img src="/IMG_20230129_193532.jpg" alt="Snowboarding" className="clickable-image square-photo"/>
-                <img src="/IMG_20230129_193537.jpg" alt="Snowboarding-Powder Mountain" className="clickable-image square-photo"/>
-                <img src="/SunDown.jpg" alt="Top of Sundown lift - Powder Mountain" className="clickable-image square-photo"/>
-                <img src="/20240627_105335.jpg" alt="Our Kitties" className="clickable-image square-photo"/>
-                <img src="/GreenKnitSweater.jpg" alt="Green Knit Sweater I made" className="clickable-image square-photo"/>
-                <img src="/BlueKnitSweater.jpg" alt="Blue Purl Knit Crop-top Sweater I made" className="clickable-image square-photo"/>
+                <img src={`${process.env.PUBLIC_URL}/20230819_115821.jpg`} alt="Tetons"
+                     className="clickable-image square-photo"/>
+                <img src={`${process.env.PUBLIC_URL}/20230817_160651.jpg`} alt="Tetons-hiking"
+                     className="clickable-image square-photo"/>
+                <img src={`${process.env.PUBLIC_URL}/IMG_20220817_162247.jpg`} alt="Tetons-Horseback Riding"
+                     className="clickable-image square-photo"/>
+                <img src={`${process.env.PUBLIC_URL}/IMG_20230129_193532.jpg`} alt="Snowboarding"
+                     className="clickable-image square-photo"/>
+                <img src={`${process.env.PUBLIC_URL}/IMG_20230129_193537.jpg`} alt="Snowboarding-Powder Mountain"
+                     className="clickable-image square-photo"/>
+                <img src={`${process.env.PUBLIC_URL}/SunDown.jpg`} alt="Top of Sundown lift - Powder Mountain"
+                     className="clickable-image square-photo"/>
+                <img src={`${process.env.PUBLIC_URL}/20240627_105335.jpg`} alt="Our Kitties"
+                     className="clickable-image square-photo"/>
+                <img src={`${process.env.PUBLIC_URL}/GreenKnitSweater.jpg`} alt="Green Knit Sweater I made"
+                     className="clickable-image square-photo"/>
+                <img src={`${process.env.PUBLIC_URL}/BlueKnitSweater.jpg`} alt="Blue Purl Knit Crop-top Sweater I made"
+                     className="clickable-image square-photo"/>
 
               </div>
           )}
@@ -134,12 +143,12 @@ function App() {
               <div className="videos-section">
                 <h2>Videos</h2>
                 <video width="600" height="600" controls>
-                  <source src="/steel.mp4" type="video/mp4"/>
+                  <source src={`${process.env.PUBLIC_URL}/steel.mp4`} type="video/mp4"/>
                   Your browser does not support the video tag.
                 </video>
-                {/* Add more videos as needed */}
+
                 <video width="600" height="600" controls>
-                  <source src="/USPSA.mp4" type="video/mp4"/>
+                  <source src={`${process.env.PUBLIC_URL}/USPSA.mp4`} type="video/mp4"/>
                   Your browser does not support the video tag.
                 </video>
               </div>
