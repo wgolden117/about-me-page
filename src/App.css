@@ -237,21 +237,53 @@ body {
   left: 10%;
   animation-duration: 3.5s;
 }
-
 .sparkle-star:nth-child(6) {
-  top: 85%;
-  left: 10%;
-  animation-duration: 3.5s;
+  top: 20%;
+  left: 60%;
+  animation-duration: 4.5s;
 }
-
 .sparkle-star:nth-child(7) {
-  top: 85%;
+  top: 40%;
   left: 10%;
-  animation-duration: 2.5s;
+  animation-duration: 5.5s;
 }
-
 .sparkle-star:nth-child(8) {
-  top: 85%;
-  left: 10%;
-  animation-duration: 2s;
+  top: 60%;
+  left: 50%;
+  animation-duration: 3s;
+}
+.sparkle-star:nth-child(9) {
+  top: 75%;
+  left: 30%;
+  animation-duration: 6.2s;
+}
+.sparkle-star:nth-child(10) {
+  top: 15%;
+  left: 85%;
+  animation-duration: 4.8s;
+}
+.sparkle-star:nth-child(11) {
+  top: 35%;
+  left: 25%;
+  animation-duration: 5.7s;
+}
+.sparkle-star:nth-child(12) {
+  top: 45%;
+  left: 60%;
+  animation-duration: 3.2s;
+}
+.sparkle-star:nth-child(13) {
+  top: 65%;
+  left: 70%;
+  animation-duration: 5.2s;
+}
+.sparkle-star:nth-child(14) {
+  top: 80%;
+  left: 40%;
+  animation-duration: 4.6s;
+}
+.sparkle-star:nth-child(15) {
+  top: 90%;
+  left: 55%;
+  animation-duration: 6s;
 }

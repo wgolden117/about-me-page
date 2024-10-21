@@ -45,6 +45,24 @@ function App() {
     }
   }, [activeSection]); // Runs when activeSection changes to 'Photos'
 
+  useEffect(() => {
+    const sparkleContainer = document.createElement('div');
+    sparkleContainer.classList.add('sparkle-twinkle');
+    document.querySelector('.App').appendChild(sparkleContainer);
+
+    for (let i = 0; i < 50; i++) {
+      const star = document.createElement('div');
+      star.classList.add('sparkle-star');
+
+      // Random position and animation duration
+      star.style.top = `${Math.random() * 100}%`;
+      star.style.left = `${Math.random() * 100}%`;
+      star.style.animationDuration = `${Math.random() * 5 + 3}s`;
+
+      sparkleContainer.appendChild(star);
+    }
+  }, []);
+
   return (
       <div className="App">
         <header className="App-header">
