@@ -6,50 +6,44 @@ function App() {
 
   // Modal Functionality Setup
   useEffect(() => {
-    const setupModalFunctionality = () => {
-      // Get the modal
-      const modal = document.getElementById("imageModal");
+    if (activeSection === 'Photos') {
+      const setupModalFunctionality = () => {
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("modalImage");
+        const captionText = document.getElementById("caption");
 
-      // Get the modal image and caption text
-      const modalImg = document.getElementById("modalImage");
-      const captionText = document.getElementById("caption");
+        // Find all images with the class 'clickable-image'
+        const images = document.querySelectorAll(".clickable-image");
 
-      // Get all images with the class "clickable-image"
-      const images = document.querySelectorAll(".clickable-image");
+        if (images.length > 0) {
+          images.forEach((image) => {
+            image.onclick = function () {
+              modal.style.display = "block";
+              modalImg.src = this.src;
+              modalImg.alt = this.alt;
+              captionText.innerHTML = this.alt;
+            };
+          });
 
-      if (images.length > 0) {
-        // Add click event to each image
-        images.forEach((image) => {
-          image.onclick = function () {
-            modal.style.display = "block"; // Show the modal
-            modalImg.src = this.src; // Set the modal image source to the clicked image
-            modalImg.alt = this.alt; // Set the modal image alt attribute
-            captionText.innerHTML = this.alt; // Set the caption based on the image alt text
-          };
-        });
-
-        // Get the <span> element that closes the modal
-        const span = document.getElementsByClassName("close")[0];
-
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function () {
-          modal.style.display = "none";
-        };
-
-        // Close the modal if clicked outside of it
-        window.onclick = function (event) {
-          if (event.target === modal) {
+          const span = document.getElementsByClassName("close")[0];
+          span.onclick = function () {
             modal.style.display = "none";
-          }
-        };
-      } else {
-        console.error("No images with class 'clickable-image' found.");
-      }
-    };
+          };
 
-    // Run setup once the component mounts
-    setupModalFunctionality();
-  }, [activeSection]); // Run every time `activeSection` changes
+          window.onclick = function (event) {
+            if (event.target === modal) {
+              modal.style.display = "none";
+            }
+          };
+        } else {
+          console.error("No images with class 'clickable-image' found.");
+        }
+      };
+
+      // Run the modal setup function
+      setupModalFunctionality();
+    }
+  }, [activeSection]); // Runs when activeSection changes to 'Photos'
 
   return (
       <div className="App">
