@@ -1,9 +1,7 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useRef} from 'react';
 import './App.css';
 
 function App() {
-  const [activeSection] = useState(null);
-  // Create refs for each section
   const bioRef = useRef(null);
   const photosRef = useRef(null);
   const videosRef = useRef(null);
@@ -12,51 +10,38 @@ function App() {
   const scrollToSection = (ref) => {
     if (ref && ref.current) {
       ref.current.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      console.error("Ref not found or undefined", ref);
     }
   };
 
-  // Modal Functionality Setup
+  // Modal functionality setup (set up once when component mounts)
   useEffect(() => {
-    if (activeSection === 'Photos') {
-      const setupModalFunctionality = () => {
-        const modal = document.getElementById("imageModal");
-        const modalImg = document.getElementById("modalImage");
-        const captionText = document.getElementById("caption");
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    const captionText = document.getElementById("caption");
 
-        // Find all images with the class 'clickable-image'
-        const images = document.querySelectorAll(".clickable-image");
+    const images = document.querySelectorAll(".clickable-image");
+    if (images.length > 0) {
+      images.forEach((image) => {
+        image.onclick = function () {
+          modal.style.display = "block";
+          modalImg.src = this.src;
+          modalImg.alt = this.alt;
+          captionText.innerHTML = this.alt;
+        };
+      });
 
-        if (images.length > 0) {
-          images.forEach((image) => {
-            image.onclick = function () {
-              modal.style.display = "block";
-              modalImg.src = this.src;
-              modalImg.alt = this.alt;
-              captionText.innerHTML = this.alt;
-            };
-          });
-
-          const span = document.getElementsByClassName("close")[0];
-          span.onclick = function () {
-            modal.style.display = "none";
-          };
-
-          window.onclick = function (event) {
-            if (event.target === modal) {
-              modal.style.display = "none";
-            }
-          };
-        } else {
-          console.error("No images with class 'clickable-image' found.");
-        }
+      const span = document.getElementsByClassName("close")[0];
+      span.onclick = function () {
+        modal.style.display = "none";
       };
 
-      // Run the modal setup function
-      setupModalFunctionality();
+      window.onclick = function (event) {
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+      };
     }
-  }, [activeSection]); // Runs when activeSection changes to 'Photos'
+  }, []); // Set up the modal functionality once
 
   useEffect(() => {
     const sparkleContainer = document.createElement('div');
@@ -100,7 +85,7 @@ function App() {
           {/* Modal */}
           <div id="imageModal" className="modal">
             <span className="close">&times;</span>
-            <img className="modal-content" id="modalImage" alt=""/>
+            <img className="modal-content" id="modalImage" alt="" />
             <div id="caption"></div>
           </div>
 
@@ -176,11 +161,11 @@ function App() {
 
           <section ref={videosRef} className="videos-section">
             <h2>Videos</h2>
-            <video width="600" height="600" controls>
+            <video width="500" height="500" controls>
               <source src={`${process.env.PUBLIC_URL}/steel.mp4`} type="video/mp4"/>
               Your browser does not support the video tag.
             </video>
-            <video width="600" height="600" controls>
+            <video width="500" height="500" controls>
               <source src={`${process.env.PUBLIC_URL}/USPSA.mp4`} type="video/mp4"/>
               Your browser does not support the video tag.
             </video>

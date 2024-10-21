@@ -11,7 +11,7 @@ html, body {
   text-align: center;
   background-image: url('/public/background.jpg'); /* Path to your background image */
   background-size: contain; /* Ensure the background image covers the entire screen */
-  background-position: center center; /* Center the background image */
+  background-position: top center; /* Center the background image */
   background-repeat: no-repeat; /* Prevent the background image from repeating */
   background-attachment: fixed;
   height: 100vh; /* Full viewport height */
