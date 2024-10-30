@@ -149,7 +149,8 @@ function App() {
               outdoors, love to camp and hike, and I absolutely love trying and eating delicious foods
               from various cultures! My favorite so far, other than my native Polish foods, is Japanese cuisine!
               It's hard to choose a favorite hobby, I love spending my free time engaging in creative and fun tasks.
-              When I'm tired or have had a long day, I unwind by relaxing and watching my favorite movies or shows!
+              When I'm tired or have had a long day, I unwind by relaxing and watching my favorite movies or shows
+              and eating my favorite snacks!
             </p>
             <p className="small-text bold-text">
              I hope you've enjoyed this About Me page as much as I enjoyed creating it! Thank you for taking the time
