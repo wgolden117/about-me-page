@@ -67,7 +67,7 @@ function App() {
       // Random position and animation duration
       star.style.top = `${Math.random() * 100}%`;
       star.style.left = `${Math.random() * 100}%`;
-      star.style.animationDuration = `${Math.random() * 5 + 3}s`;
+      star.style.animationDuration = `${Math.random() * 2 + 1}s`;
 
       sparkleContainer.appendChild(star);
     }

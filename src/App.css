@@ -247,5 +247,5 @@ body {
   background-color: white;
   border-radius: 50%;
   animation: sparkleTwinkle 3s infinite;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Adds a soft glow to the stars */
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Adds a soft glow to the stars */
 }
