@@ -86,7 +86,7 @@ function App() {
 
           <p className="small-text bold-text">
             I have experience in Java, C, C++, Python, and SQL. I’ve also worked on various database management systems,
-            and in my free time, I am currently developing a connect4 game using JavaFX.
+            and in my free time, I work on personal projects!
           </p>
 
           <p className="small-text bold-text">
@@ -122,30 +122,38 @@ function App() {
             {/* More detailed bio here */}
             <p className="small-text bold-text">
               I first attended Arizona State University after obtaining my Associates Degree from
-              my local Community College. From ASU, I graduated with a BS in Criminology and Criminal Justice,
-              Summa Cum Laude, in 2018.
+              my local Community College. Then, I attended ASU online and graduated Summa Cun Laude.
+              with a Bachelors degree in Criminology and Criminal Justice.
             </p>
             <p className="small-text bold-text">
               I worked and went to school throughout my time working towards my Associates and BS Degree.
-              After graduating, I continued working in my current position in accounts payable. Later,
-              I also worked in customer service and sales.
+              For a period of time I worked multiple jobs while attending school until I found a full-time position.
+              After graduating, I continued working in my current position at the time in accounts payable.
+              In the coming years, I also worked in human resources, customer service, and sales.
             </p>
             <p className="small-text bold-text">
-              Originally I'm from Chicago. I grew up there, and lived in the Suburbs until my early 20s.
-              Then, my husband and I moved to Ogden, Utah due to a work promotion. About 4 years later
-              we moved to Post Falls, ID where we currently live with our three beloved cats.
+              Originally I'm from Chicago. I grew up there, and lived in the Suburbs until my husband and I moved
+              to Ogden, Utah. We lived there for about 4 years, and we are now living in Post Falls, ID with our
+              3 beloved cats.
             </p>
             <p className="small-text bold-text">
-              Throughout my working career, I discovered a passion for programming, and decided to go back to
-              school.
-              I am now working towards my second BS, this time in Software Engineering. I decided to work towards
+              Throughout my working career, I discovered a passion for programming, and made the decision to go back to
+              school. I am now working towards my second BS, this time in Software Engineering. I decided to work
+              towards
               a second BS instead of a Masters because the BS is accredited by the Fulton School of Engineering
-              with ASU.
+              with ASU and my anticipated graduation date is May of 2026!
             </p>
             <p className="small-text bold-text">
               My personal hobbies include competitive shooting as part of the United States Practical Shooting
               Association, snowboarding, playing the piano and violin, knitting, and gaming. I also love the
-              outdoors and love to camp and hike!
+              outdoors, love to camp and hike, and I absolutely love trying and eating delicious foods
+              from various cultures! My favorite so far, other than my native Polish foods, is Japanese cuisine!
+              It's hard to choose a favorite hobby, I love spending my free time engaging in creative and fun tasks.
+              When I'm tired or have had a long day, I unwind by relaxing and watching my favorite movies or shows!
+            </p>
+            <p className="small-text bold-text">
+             I hope you've enjoyed this About Me page as much as I enjoyed creating it! Thank you for taking the time
+             to read a little about my life!
             </p>
             <button className="return-button" onClick={scrollToTop}>Return to Top</button>
           </section>
