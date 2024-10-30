@@ -122,25 +122,23 @@ function App() {
             {/* More detailed bio here */}
             <p className="small-text bold-text">
               I first attended Arizona State University after obtaining my Associates Degree from
-              my local Community College. Then, I attended ASU online and graduated Summa Cun Laude.
+              my local Community College. Then, I attended ASU online and graduated Summa Cum Laude
               with a Bachelors degree in Criminology and Criminal Justice.
             </p>
             <p className="small-text bold-text">
-              I worked and went to school throughout my time working towards my Associates and BS Degree.
-              For a period of time I worked multiple jobs while attending school until I found a full-time position.
-              After graduating, I continued working in my current position at the time in accounts payable.
-              In the coming years, I also worked in human resources, customer service, and sales.
+              I worked full-time while obtaining my Associates and BS Degree and for a period of time I even worked
+              multiple jobs while attending school. After graduating, I continued working in accounts payable and in
+              the following years, I also worked in human resources, customer service, and sales.
             </p>
             <p className="small-text bold-text">
-              Originally I'm from Chicago. I grew up there, and lived in the Suburbs until my husband and I moved
+              I'm originally from Chicago. I grew up there, and lived in the Suburbs until my husband and I moved
               to Ogden, Utah. We lived there for about 4 years, and we are now living in Post Falls, ID with our
               3 beloved cats.
             </p>
             <p className="small-text bold-text">
               Throughout my working career, I discovered a passion for programming, and made the decision to go back to
               school. I am now working towards my second BS, this time in Software Engineering. I decided to work
-              towards
-              a second BS instead of a Masters because the BS is accredited by the Fulton School of Engineering
+              towards a second BS instead of a Masters because the BS is accredited by the Fulton School of Engineering
               with ASU and my anticipated graduation date is May of 2026!
             </p>
             <p className="small-text bold-text">
