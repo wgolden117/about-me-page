@@ -172,7 +172,7 @@ function App() {
                  className="clickable-image square-photo"/>
             <img src={`${process.env.PUBLIC_URL}/SunDown.jpg`} alt="Top of Sundown lift - Powder Mountain"
                  className="clickable-image square-photo"/>
-            <img src={`${process.env.PUBLIC_URL}/20240627_105335.jpg`} alt="Our Kitties"
+            <img src={`${process.env.PUBLIC_URL}/20240627_105335.jpg`} alt="Our 3 Cats"
                  className="clickable-image square-photo"/>
             <img src={`${process.env.PUBLIC_URL}/GreenKnitSweater.jpg`} alt="Green Knit Sweater I made"
                  className="clickable-image square-photo"/>
