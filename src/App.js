@@ -55,31 +55,42 @@ function App() {
 
   // Set up sparkle effect for visual enhancement
   useEffect(() => {
-    const sparkleContainer = document.querySelector('.sparkle-twinkle');
+    const generateStars = (containerClass, starCount) => {
+      const container = document.querySelector(containerClass);
 
-    // Clear any existing sparkles
-    sparkleContainer.innerHTML = '';
+      if (container) {
+        container.innerHTML = ''; // Clear existing stars
+        for (let i = 0; i < starCount; i++) {
+          const star = document.createElement('div');
+          star.classList.add('sparkle-star');
 
-    // Create and position multiple sparkle stars randomly
-    for (let i = 0; i < 50; i++) {
-      const star = document.createElement('div');
-      star.classList.add('sparkle-star');
+          // Random position and animation duration
+          star.style.top = `${Math.random() * 100}%`;
+          star.style.left = `${Math.random() * 100}%`;
+          star.style.animationDuration = `${Math.random() * 2 + 1}s`;
 
-      // Random position and animation duration
-      star.style.top = `${Math.random() * 100}vh`; /* Random position vertically */
-      star.style.left = `${Math.random() * 100}vw`; /* Random position horizontally */
-      star.style.animationDuration = `${Math.random() * 2 + 1}s`; /* Randomize animation speed */
+          container.appendChild(star);
+        }
+      }
+    };
 
-      sparkleContainer.appendChild(star);
-    }
-  }, []); // Runs only once to set up the sparkle effect
+    // Generate stars for both containers
+    generateStars('.global-stars', 50);
+    generateStars('.photo-stars', 30);
+  }, []);
 
 
   return (
       <>
-      <div className="sparkle-twinkle">
+        {/* Stars across the entire page */}
+      <div className="sparkle-twinkle global-stars">
         <div className="sparkle-star"></div>
       </div>
+
+        {/* Stars on the background photo */}
+        <div className="sparkle-twinkle photo-stars">
+          <div className="sparkle-star"></div>
+        </div>
 
   <div className="App">
     <header className="App-header">
