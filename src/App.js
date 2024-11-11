@@ -10,14 +10,14 @@ function App() {
   // Function to scroll to a specific section smoothly
   const scrollToSection = (ref) => {
     if (ref && ref.current) {
-      ref.current.scrollIntoView({ behavior: 'smooth' });
+      ref.current.scrollIntoView({behavior: 'smooth'});
     }
   };
 
- // Function to scroll the page to the top smoothly
+  // Function to scroll the page to the top smoothly
   const scrollToTop = () => {
     document.body.classList.add('scrollable'); // Ensure body can scroll
-    window.scrollTo({ top: 0, behavior: 'smooth' }); // Smooth scroll to top
+    window.scrollTo({top: 0, behavior: 'smooth'}); // Smooth scroll to top
   };
 
   // Setup modal functionality for viewing images in larger size
@@ -55,9 +55,10 @@ function App() {
 
   // Set up sparkle effect for visual enhancement
   useEffect(() => {
-    const sparkleContainer = document.createElement('div');
-    sparkleContainer.classList.add('sparkle-twinkle');
-    document.querySelector('.App').appendChild(sparkleContainer);
+    const sparkleContainer = document.querySelector('.sparkle-twinkle');
+
+    // Clear any existing sparkles
+    sparkleContainer.innerHTML = '';
 
     // Create and position multiple sparkle stars randomly
     for (let i = 0; i < 50; i++) {
@@ -65,31 +66,37 @@ function App() {
       star.classList.add('sparkle-star');
 
       // Random position and animation duration
-      star.style.top = `${Math.random() * 100}%`;
-      star.style.left = `${Math.random() * 100}%`;
-      star.style.animationDuration = `${Math.random() * 2 + 1}s`;
+      star.style.top = `${Math.random() * 100}vh`; /* Random position vertically */
+      star.style.left = `${Math.random() * 100}vw`; /* Random position horizontally */
+      star.style.animationDuration = `${Math.random() * 2 + 1}s`; /* Randomize animation speed */
 
       sparkleContainer.appendChild(star);
     }
   }, []); // Runs only once to set up the sparkle effect
 
+
   return (
-      <div className="App">
-        <header className="App-header">
-          <h1>About Me</h1>
+      <>
+      <div className="sparkle-twinkle">
+        <div className="sparkle-star"></div>
+      </div>
+
+  <div className="App">
+    <header className="App-header">
+      <h1 className="kalnia-glaze-header">About Me</h1>
           <img src={`${process.env.PUBLIC_URL}/20240122_103005.jpg`} alt="Weronika Golden" className="profile-photo"/>
 
-          <p className="small-text bold-text">
+          <p className="small-text bold-text justified-text">
             Hello! My name is Weronika Golden. I’m a software engineering student at Arizona State University, with a
             passion for developing software solutions and solving problems using technology.
           </p>
 
-          <p className="small-text bold-text">
+          <p className="small-text bold-text justified-text">
             I have experience in Java, C, C++, Python, and SQL. I’ve also worked on various database management systems,
             and in my free time, I work on personal projects!
           </p>
 
-          <p className="small-text bold-text">
+          <p className="small-text bold-text justified-text">
             I love exploring new technologies and working on challenging projects that allow me to expand my skill
             set.
           </p>
@@ -99,10 +106,6 @@ function App() {
             <span className="close">&times;</span>
             <img className="modal-content" id="modalImage" alt=""/>
             <div id="caption"></div>
-          </div>
-
-          <div className="sparkle-twinkle">
-            <div className="sparkle-star"></div>
           </div>
 
           {/* Links that trigger scrolling */}
@@ -117,8 +120,8 @@ function App() {
             </a>
           </div>
 
-          <section ref={bioRef} className="bio-section">
-            <h2>Detailed Bio</h2>
+          <div className="bio-section">
+            <h1 className="bio-title">Detailed Bio</h1>
             {/* More detailed bio here */}
             <p className="small-text bold-text">
               I first attended Arizona State University after obtaining my Associates Degree from
@@ -151,14 +154,14 @@ function App() {
               and eating my favorite snacks!
             </p>
             <p className="small-text bold-text">
-             I hope you've enjoyed this About Me page as much as I enjoyed creating it! Thank you for taking the time
-             to read a little about my life!
+              I hope you've enjoyed this About Me page as much as I enjoyed creating it! Thank you for taking the time
+              to read a little about my life!
             </p>
             <button className="return-button" onClick={scrollToTop}>Return to Top</button>
-          </section>
+          </div>
 
           <section ref={photosRef} className="photo-gallery">
-            <h2>Photos</h2>
+            <h1 className="photo-title">Photos</h1>
             <img src={`${process.env.PUBLIC_URL}/20230819_115821.jpg`} alt="Tetons"
                  className="clickable-image square-photo"/>
             <img src={`${process.env.PUBLIC_URL}/20230817_160651.jpg`} alt="Tetons-hiking"
@@ -181,7 +184,7 @@ function App() {
           </section>
 
           <section ref={videosRef} className="videos-section">
-            <h2>Videos</h2>
+            <h1 className="video-title">Videos</h1>
             <video width="500" height="500" controls preload="metadata"
                    poster={`${process.env.PUBLIC_URL}/video-thumbnail1.jpg`}>
               <source src={`${process.env.PUBLIC_URL}/steel.mp4`} type="video/mp4"/>
@@ -196,6 +199,7 @@ function App() {
           </section>
         </header>
       </div>
+    </>
   );
 }
 

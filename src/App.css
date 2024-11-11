@@ -108,6 +108,17 @@ body {
   font-weight: bold;
 }
 
+.justified-text {
+  text-align: justify; /* Align text to the left */
+  width: 80%; /* Set the width of the text block */
+  margin: 20px auto; /* Center the block horizontally within the page */
+  padding: 20px; /* Add padding inside the block */
+  background-color: rgba(255, 255, 255, 0.1); /* Optional: Add a subtle background for contrast */
+  color: whitesmoke; /* Keep text readable against the background */
+  line-height: 1.6; /* Improve line spacing for readability */
+  border-radius: 8px; /* Optional: Add rounded corners for a polished look */
+}
+
 .App-link {
   color: whitesmoke;
 }
@@ -139,10 +150,68 @@ body {
   background-color: #555;
 }
 
+.kalnia-glaze-header {
+  font-family: "Kalnia Glaze", serif;
+  font-optical-sizing: auto; /* Ensure optical sizing adjusts automatically */
+  font-weight: 450; /* Replace with your desired weight, e.g., 300, 500, 700 */
+  font-style: normal;
+  font-variation-settings: "wdth" 100; /* Adjust variation settings if needed */
+  text-align: center; /* Center the header */
+  font-size: 50px; /* Adjust the font size */
+  margin-bottom: 10px; /* Add space below the header */
+  color: whitesmoke;
+}
+
+.bio-title {
+  text-align: center; /* Center the title */
+  font-size: 40px; /* Adjust the font size for emphasis */
+  color: whitesmoke; /* Match the text color */
+  border-bottom: 2px solid whitesmoke; /* Add an underline as a border */
+  width: fit-content; /* Ensure the element size matches the text content */
+  margin-left: auto; /* Center the element horizontally */
+  margin-right: auto; /* Center the element horizontally */
+  font-family: "Arizonia", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.photo-title {
+  text-align: center; /* Center the title */
+  font-size: 40px; /* Adjust the font size for emphasis */
+  color: whitesmoke; /* Match the text color */
+  border-bottom: 2px solid whitesmoke; /* Add an underline as a border */
+  width: fit-content; /* Ensure the element size matches the text content */
+  margin-left: auto; /* Center the element horizontally */
+  margin-right: auto; /* Center the element horizontally */
+  font-family: "Arizonia", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.video-title {
+  text-align: center; /* Center the title */
+  font-size: 40px; /* Adjust the font size for emphasis */
+  color: whitesmoke; /* Match the text color */
+  border-bottom: 2px solid whitesmoke; /* Add an underline as a border */
+  width: fit-content; /* Ensure the element size matches the text content */
+  margin-left: auto; /* Center the element horizontally */
+  margin-right: auto; /* Center the element horizontally */
+  font-family: "Arizonia", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .bio-section,
 .photos-section,
 .videos-section {
-  margin-top: 20px;
+  text-align: justify; /* Align text to the left */
+  width: 80%; /* Set the width of the text block */
+  margin: 20px auto; /* Center the block horizontally within the page */
+  padding: 20px; /* Add padding inside the block */
+  background-color: rgba(255, 255, 255, 0.1); /* Optional: Add a subtle background for contrast */
+  color: whitesmoke; /* Keep text readable against the background */
+  line-height: 1.6; /* Improve line spacing for readability */
+  border-radius: 8px; /* Optional: Add rounded corners for a polished look */
 }
 
 .photo-gallery {
@@ -220,15 +289,14 @@ body {
 
 /* Sparkle Effect */
 .sparkle-twinkle {
-  width: 100%;
-  height: 100vh;
-  background: transparent;
-  position: absolute;
+  position: fixed; /* Ensure sparkles stay in place as the user scrolls */
   top: 0;
   left: 0;
-  z-index: 2;
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  pointer-events: none; /* Ensure sparkles don't block interaction with content */
+  z-index: 9999; /* Ensure sparkles appear above all other elements */
   overflow: hidden;
-  pointer-events: none; /* Ensures it doesn't block user interaction */
 }
 
 @keyframes sparkleTwinkle {
