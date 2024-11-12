@@ -7,10 +7,16 @@ function App() {
   const photosRef = useRef(null);
   const videosRef = useRef(null);
 
-  // Function to scroll to a specific section smoothly
+// Function to scroll to a specific section smoothly
   const scrollToSection = (ref) => {
     if (ref && ref.current) {
-      ref.current.scrollIntoView({behavior: 'smooth'});
+      const yOffset = -50; // Adjust for any fixed headers or padding
+      const yPosition = ref.current.getBoundingClientRect().top + window.scrollY + yOffset;
+
+      window.scrollTo({
+        top: yPosition,
+        behavior: 'smooth',
+      });
     }
   };
 
@@ -31,7 +37,7 @@ function App() {
     if (images.length > 0) {
       images.forEach((image) => {
         image.onclick = function () {
-          modal.style.display = "block";
+          modal.style.display = "flex";  // Display the modal as a flexbox for centering
           modalImg.src = this.src;
           modalImg.alt = this.alt;
           captionText.innerHTML = this.alt; // Set image caption
@@ -57,7 +63,6 @@ function App() {
   useEffect(() => {
     const generateStars = (containerClass, starCount) => {
       const container = document.querySelector(containerClass);
-
       if (container) {
         container.innerHTML = ''; // Clear existing stars
         for (let i = 0; i < starCount; i++) {
@@ -74,9 +79,14 @@ function App() {
       }
     };
 
-    // Generate stars for both containers
     generateStars('.global-stars', 50);
     generateStars('.photo-stars', 30);
+
+    // Cleanup function to prevent memory leaks
+    return () => {
+      document.querySelector('.global-stars').innerHTML = '';
+      document.querySelector('.photo-stars').innerHTML = '';
+    };
   }, []);
 
 
@@ -100,79 +110,77 @@ function App() {
           <p className="small-text bold-text justified-text">
             Hello! My name is Weronika Golden. I’m a software engineering student at Arizona State University, with a
             passion for developing software solutions and solving problems using technology.
-          </p>
 
-          <p className="small-text bold-text justified-text">
             I have experience in Java, C, C++, Python, and SQL. I’ve also worked on various database management systems,
             and in my free time, I work on personal projects!
-          </p>
 
-          <p className="small-text bold-text justified-text">
             I love exploring new technologies and working on challenging projects that allow me to expand my skill
             set.
           </p>
 
           {/* Modal */}
-          <div id="imageModal" className="modal">
-            <span className="close">&times;</span>
-            <img className="modal-content" id="modalImage" alt=""/>
-            <div id="caption"></div>
-          </div>
+      <div id="imageModal" className="modal">
+        <span className="close">&times;</span>
+        <div className="modal-content-wrapper">
+          <img className="modal-content" id="modalImage" alt=""/>
+          <div id="caption"></div>
+        </div>
+        </div>
 
-          {/* Links that trigger scrolling */}
-          <div>
-            <button onClick={() => scrollToSection(bioRef)} className="link-button">Bio</button>
-            <button onClick={() => scrollToSection(photosRef)} className="link-button">Photos</button>
-            <button onClick={() => scrollToSection(videosRef)} className="link-button">Videos</button>
+        {/* Links that trigger scrolling */}
+        <div>
+          <button onClick={() => scrollToSection(bioRef)} className="link-button">Bio</button>
+          <button onClick={() => scrollToSection(photosRef)} className="link-button">Photos</button>
+          <button onClick={() => scrollToSection(videosRef)} className="link-button">Videos</button>
 
-            {/* GitHub Link Button */}
-            <a href="https://github.com/wgolden117" target="_blank" rel="noopener noreferrer">
-              <button className="link-button">GitHub</button>
-            </a>
-          </div>
+          {/* GitHub Link Button */}
+          <a href="https://github.com/wgolden117" target="_blank" rel="noopener noreferrer">
+            <button className="link-button">GitHub</button>
+          </a>
+        </div>
 
-          <div className="bio-section">
-            <h1 className="bio-title">Detailed Bio</h1>
-            {/* More detailed bio here */}
-            <p className="small-text bold-text">
-              I first attended Arizona State University after obtaining my Associates Degree from
-              my local Community College. Then, I attended ASU online and graduated Summa Cum Laude
-              with a Bachelors degree in Criminology and Criminal Justice.
-            </p>
-            <p className="small-text bold-text">
-              I worked full-time while obtaining my Associates and BS Degree and for a period of time I even worked
-              multiple jobs while attending school. After graduating, I continued working in accounts payable and in
-              the following years, I also worked in human resources, customer service, and sales.
-            </p>
-            <p className="small-text bold-text">
-              I'm originally from Chicago. I grew up there, and lived in the Suburbs until my husband and I moved
-              to Ogden, Utah. We lived there for about 4 years, and we are now living in Post Falls, ID with our
-              3 beloved cats.
-            </p>
-            <p className="small-text bold-text">
-              Throughout my working career, I discovered a passion for programming, and made the decision to go back to
-              school. I am now working towards my second BS, this time in Software Engineering. I decided to work
-              towards a second BS instead of a Masters because the BS is accredited by the Fulton School of Engineering
-              with ASU and my anticipated graduation date is May of 2026!
-            </p>
-            <p className="small-text bold-text">
-              My personal hobbies include competitive shooting as part of the United States Practical Shooting
-              Association, snowboarding, playing the piano and violin, knitting, and gaming. I also love the
-              outdoors, love to camp and hike, and I absolutely love trying and eating delicious foods
-              from various cultures! My favorite so far, other than my native Polish foods, is Japanese cuisine!
-              It's hard to choose a favorite hobby, I love spending my free time engaging in creative and fun tasks.
-              When I'm tired or have had a long day, I unwind by relaxing and watching my favorite movies or shows
-              and eating my favorite snacks!
-            </p>
-            <p className="small-text bold-text">
-              I hope you've enjoyed this About Me page as much as I enjoyed creating it! Thank you for taking the time
-              to read a little about my life!
-            </p>
-            <button className="return-button" onClick={scrollToTop}>Return to Top</button>
-          </div>
+      <div ref={bioRef} className="bio-section">
+        <h1 className="section-title">Detailed Bio</h1>
+        <p className="small-text bold-text">
+          I first attended Arizona State University after obtaining my Associates Degree from
+          my local Community College. Then, I attended ASU online and graduated Summa Cum Laude
+          with a Bachelors degree in Criminology and Criminal Justice.
+        </p>
+        <p className="small-text bold-text">
+          I worked full-time while obtaining my Associates and BS Degree and for a period of time I even worked
+          multiple jobs while attending school. After graduating, I continued working in accounts payable and in
+          the following years, I also worked in human resources, customer service, and sales.
+        </p>
+        <p className="small-text bold-text">
+          I'm originally from Chicago. I grew up there, and lived in the Suburbs until my husband and I moved
+          to Ogden, Utah. We lived there for about 4 years, and we are now living in Post Falls, ID with our
+          3 beloved cats.
+        </p>
+        <p className="small-text bold-text">
+          Throughout my working career, I discovered a passion for programming, and made the decision to go back to
+          school. I am now working towards my second BS, this time in Software Engineering. I decided to work
+          towards a second BS instead of a Masters because the BS is accredited by the Fulton School of Engineering
+          with ASU and my anticipated graduation date is May of 2026!
+        </p>
+        <p className="small-text bold-text">
+          My personal hobbies include competitive shooting as part of the United States Practical Shooting
+          Association, snowboarding, playing the piano and violin, knitting, and gaming. I also love the
+          outdoors, love to camp and hike, and I absolutely love trying and eating delicious foods
+          from various cultures! My favorite so far, other than my native Polish foods, is Japanese cuisine!
+          It's hard to choose a favorite hobby, I love spending my free time engaging in creative and fun tasks.
+          When I'm tired or have had a long day, I unwind by relaxing and watching my favorite movies or shows
+          and eating my favorite snacks!
+        </p>
+        <p className="small-text bold-text">
+          I hope you've enjoyed this About Me page as much as I enjoyed creating it! Thank you for taking the time
+          to read a little about my life!
+        </p>
+        <button className="return-button" onClick={scrollToTop}>Return to Top</button>
+      </div>
 
-          <section ref={photosRef} className="photo-gallery">
-            <h1 className="photo-title">Photos</h1>
+      <section ref={photosRef} className="photo-gallery">
+          <h1 className="section-title">Photos</h1>
+          <div className="photo-grid">
             <img src={`${process.env.PUBLIC_URL}/20230819_115821.jpg`} alt="Tetons"
                  className="clickable-image square-photo"/>
             <img src={`${process.env.PUBLIC_URL}/20230817_160651.jpg`} alt="Tetons-hiking"
@@ -191,27 +199,30 @@ function App() {
                  className="clickable-image square-photo"/>
             <img src={`${process.env.PUBLIC_URL}/BlueKnitSweater.jpg`} alt="Blue Purl Knit Crop-top Sweater I made"
                  className="clickable-image square-photo"/>
-            <button className="return-button" onClick={scrollToTop}>Return to Top</button>
-          </section>
+          </div>
+          <button className="return-button" onClick={scrollToTop}>Return to Top</button>
+        </section>
 
-          <section ref={videosRef} className="videos-section">
-            <h1 className="video-title">Videos</h1>
-            <video width="500" height="500" controls preload="metadata"
-                   poster={`${process.env.PUBLIC_URL}/video-thumbnail1.jpg`}>
-              <source src={`${process.env.PUBLIC_URL}/steel.mp4`} type="video/mp4"/>
-              Your browser does not support the video tag.
-            </video>
-            <video width="500" height="500" controls preload="metadata"
-                   poster={`${process.env.PUBLIC_URL}/video-thumbnail2.jpg`}>
-              <source src={`${process.env.PUBLIC_URL}/USPSA.mp4`} type="video/mp4"/>
-              Your browser does not support the video tag.
-            </video>
-            <button className="return-button" onClick={scrollToTop}>Return to Top</button>
-          </section>
-        </header>
-      </div>
-    </>
-  );
+      <section ref={videosRef} className="videos-section">
+        <h1 className="section-title">Videos</h1>
+        <div className="videos-container">
+          <video width="300" height="300" controls preload="metadata"
+                 poster={`${process.env.PUBLIC_URL}/video-thumbnail1.jpg`}>
+            <source src={`${process.env.PUBLIC_URL}/steel.mp4`} type="video/mp4"/>
+            Your browser does not support the video tag.
+          </video>
+          <video width="300" height="300" controls preload="metadata"
+                 poster={`${process.env.PUBLIC_URL}/video-thumbnail2.jpg`}>
+            <source src={`${process.env.PUBLIC_URL}/USPSA.mp4`} type="video/mp4"/>
+            Your browser does not support the video tag.
+          </video>
+        </div>
+          <button className="return-button" onClick={scrollToTop}>Return to Top</button>
+      </section>
+    </header>
+  </div>
+      </>
+);
 }
 
 export default App;
