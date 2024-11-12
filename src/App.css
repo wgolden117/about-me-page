@@ -126,13 +126,13 @@ body {
       width: 100%; /* Make the video take full width of the screen */
       height: auto; /* Automatically adjust the height to keep aspect ratio */
     }
-  }
+   }
+ }
 
   .square-photo {
     width: 100%; /* Make the photo adjust to screen size */
     height: auto; /* Maintain aspect ratio */
   }
-}
 
 /* Style the profile photo */
 .profile-photo {
