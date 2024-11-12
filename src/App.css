@@ -126,13 +126,13 @@ body {
       width: 100%; /* Make the video take full width of the screen */
       height: auto; /* Automatically adjust the height to keep aspect ratio */
     }
-   }
- }
+  }
 
   .square-photo {
     width: 100%; /* Make the photo adjust to screen size */
     height: auto; /* Maintain aspect ratio */
   }
+}
 
 /* Style the profile photo */
 .profile-photo {
@@ -231,7 +231,7 @@ body {
   text-align: justify; /* Align text to the left */
   width: 80%; /* Set the width of the text block */
   margin: 20px auto; /* Center the block horizontally within the page */
-  padding: 10px; /* Add padding inside the block */
+  padding: 20px; /* Add padding inside the block */
   background-color: rgba(255, 255, 255, 0.1); /* Optional: Add a subtle background for contrast */
   color: whitesmoke; /* Keep text readable against the background */
   line-height: 1.6; /* Improve line spacing for readability */
@@ -239,48 +239,37 @@ body {
 }
 
 .videos-section {
-  display: flex;
-  flex-direction: column; /* Stack title, videos, and button vertically */
-  align-items: center; /* Center everything horizontally */
-  text-align: center; /* Center text */
-  margin: 20px auto; /* Add spacing around the section */
-  width: 90%; /* Optional: Constrain the width of the section */
-}
-
-.videos-container {
   display: grid; /* Use CSS Grid for layout */
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Side-by-side layout */
-  gap: 50px; /* Space between videos */
-  justify-content: center; /* Center the grid horizontally */
-  width: 100%; /* Ensure the grid takes full width */
-  max-width: 1000px; /* Optional: Constrain the width of the grid */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Create columns for videos */
+  gap: 20px; /* Space between videos */
+  justify-content: center; /* Center the grid content horizontally */
+  align-items: center; /* Center items vertically */
+  margin: 20px auto; /* Center the section itself */
+  max-width: 90%; /* Limit the width of the section */
 }
 
-.videos-container video {
-  width: 100%; /* Make video take full width of its grid column */
+.videos-section video {
+  width: 100%; /* Make video take full width of the grid column */
   height: auto; /* Maintain aspect ratio */
-}
-
-.return-button {
-  margin-top: 20px; /* Add spacing above the button */
 }
 
 .photo-gallery {
   display: flex;
   flex-direction: column; /* Arrange items vertically */
   justify-content: center;
-  width: 90%;
-  margin-top: 5px;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 20px;
 }
 
 .photo-gallery img {
   transition: transform 0.3s ease;
   width: 400px;
   height: 300px;
-  max-width: 90%;
+  max-width: 100%;
   cursor: pointer;
   display: block;
-  margin: 5px auto;
+  margin: 10px auto;
 }
 
 .photo-gallery img:hover {
