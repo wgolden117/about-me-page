@@ -205,7 +205,6 @@ function App() {
 
       <section ref={videosRef} className="videos-section">
         <h1 className="section-title">Videos</h1>
-        <div className="videos-container">
           <video width="400" height="400" controls preload="none"
                  poster={`${process.env.PUBLIC_URL}/video-thumbnail1.jpg`}>
             <source src={`${process.env.PUBLIC_URL}/steel.mp4`} type="video/mp4"/>
@@ -216,7 +215,6 @@ function App() {
             <source src={`${process.env.PUBLIC_URL}/USPSA.mp4`} type="video/mp4"/>
             Your browser does not support the video tag.
           </video>
-        </div>
           <button className="return-button" onClick={scrollToTop}>Return to Top</button>
       </section>
     </header>
