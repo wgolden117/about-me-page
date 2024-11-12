@@ -227,30 +227,16 @@ body {
   font-style: normal;
 }
 .bio-section,
-.photos-section {
-  text-align: justify; /* Align text to the left */
+.photos-section,
+.videos-section {
+  text-align: center; /* Align text to the left */
   width: 80%; /* Set the width of the text block */
-  margin: 20px auto; /* Center the block horizontally within the page */
-  padding: 20px; /* Add padding inside the block */
+  margin: 20px; /* Center the block horizontally within the page */
+  padding: 50px; /* Add padding inside the block */
   background-color: rgba(255, 255, 255, 0.1); /* Optional: Add a subtle background for contrast */
   color: whitesmoke; /* Keep text readable against the background */
   line-height: 1.6; /* Improve line spacing for readability */
   border-radius: 8px; /* Optional: Add rounded corners for a polished look */
-}
-
-.videos-section {
-  display: grid; /* Use CSS Grid for layout */
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Create columns for videos */
-  gap: 20px; /* Space between videos */
-  justify-content: center; /* Center the grid content horizontally */
-  align-items: center; /* Center items vertically */
-  margin: 20px auto; /* Center the section itself */
-  max-width: 90%; /* Limit the width of the section */
-}
-
-.videos-section video {
-  width: 100%; /* Make video take full width of the grid column */
-  height: auto; /* Maintain aspect ratio */
 }
 
 .photo-gallery {
@@ -373,7 +359,12 @@ body {
   0%, 100% {
     opacity: 0.2;
   }
-  50% {
+  50% {/* Responsive Adjustment for Mobile */
+    @media (max-width: 768px) {
+      .videos-section {
+        grid-template-columns: 1fr; /* Stack videos vertically on small screens */
+      }
+    }
     opacity: 0.5;
   }
 }
