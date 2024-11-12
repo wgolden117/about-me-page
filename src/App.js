@@ -111,7 +111,7 @@ function App() {
             Hello! My name is Weronika Golden. I’m a software engineering student at Arizona State University, with a
             passion for developing software solutions and solving problems using technology.
 
-            I have experience in Java, C, C++, Python, and SQL. I’ve also worked on various database management systems,
+            I have experience in Java, C, Python, and SQL. I’ve also worked on various database management systems,
             and in my free time, I work on personal projects!
 
             I love exploring new technologies and working on challenging projects that allow me to expand my skill
