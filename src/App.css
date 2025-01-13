@@ -173,8 +173,8 @@ body {
   font-weight: bold;
 }
 
-.justified-text {
-  text-align: justify; /* Align text to the left */
+.profile-text {
+  text-align: left; /* Align text to the left */
   width: 80%; /* Set the width of the text block */
   margin: 20px auto; /* Center the block horizontally within the page */
   padding: 20px; /* Add padding inside the block */
