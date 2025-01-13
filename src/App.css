@@ -79,9 +79,12 @@ body {
 @media (max-width: 768px) {
   /* Mobile-specific styles */
   p {
-    text-align: justify;
-    font-size: 14px; /* Optional: Adjust font size for mobile screens */
-    line-height: 2.0; /* Optional: Increase line spacing for clarity */
+    text-align: left; /* Disable justification for better readability */
+    font-size: 14px; /* Adjust font size for mobile screens */
+    line-height: 1.6; /* Increase line spacing for clarity */
+    hyphens: none; /* Disable hyphenation to avoid word breaks */
+    overflow-wrap: normal; /* Prevent excessive line breaking */
+    word-wrap: break-word; /* Fallback for older browsers */
   }
   .modal-content {
     max-width: 100%; /* Allow the image to take up more width */
