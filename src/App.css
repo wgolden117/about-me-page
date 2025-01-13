@@ -79,9 +79,9 @@ body {
 @media (max-width: 768px) {
   /* Mobile-specific styles */
   p {
-    text-align: left; /* Disable justification for better readability */
+    text-align: justify;
     font-size: 14px; /* Optional: Adjust font size for mobile screens */
-    line-height: 1.6; /* Optional: Increase line spacing for clarity */
+    line-height: 2.0; /* Optional: Increase line spacing for clarity */
   }
   .modal-content {
     max-width: 100%; /* Allow the image to take up more width */
