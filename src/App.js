@@ -108,7 +108,7 @@ function App() {
           <img src={`${process.env.PUBLIC_URL}/20240122_103005.jpg`} alt="Weronika Golden" className="profile-photo"/>
 
           <p className="small-text bold-text profile-text">
-            Hello! My name is Weronika Golden. I’m a software engineering student at Arizona State University, with a
+            Hi! My name is Weronika Golden. I’m a software engineering student at Arizona State University, with a
             passion for developing software solutions and solving problems using technology.
 
             I have experience in Java, C, Python, and SQL. I’ve also worked on various database management systems,
