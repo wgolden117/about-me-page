@@ -20,7 +20,7 @@ p {
 /* App Container and General Styling */
 .App {
   text-align: center;
-  background-image: url('/public/background.jpg'); /* Path to background image */
+  background-image: url('./assets/images/background.jpg'); /* Path to background image */
   background-size: contain; /* Ensure the background image covers the entire screen */
   background-position: top center; /* Center the background image */
   background-repeat: no-repeat; /* Prevent the background image from repeating */
