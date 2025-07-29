@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import './App.css';
 // Import images
-import profilePhoto from './assets/images/20240122_103005.jpg';
+import profilePhoto from './assets/images/Weronika.jpg';
 import photo1 from './assets/images/20230819_115821.jpg';
 import photo2 from './assets/images/20230817_160651.jpg';
 import photo3 from './assets/images/IMG_20220817_162247.jpg';
@@ -11,14 +11,15 @@ import photo6 from './assets/images/SunDown.jpg';
 import photo7 from './assets/images/20240627_105335.jpg';
 import photo8 from './assets/images/GreenKnitSweater.jpg';
 import photo9 from './assets/images/BlueKnitSweater.jpg';
+import photo10 from './assets/images/CableSweater.jpg';
 
 // Import video thumbnails
 import thumb1 from './assets/images/video-thumbnail1.jpg';
-import thumb2 from './assets/images/video-thumbnail2.jpg';
+import thumb2 from './assets/images/video-thumbnail3.jpg';
 
 // Import videos
 import video1 from './assets/videos/steel.mp4';
-import video2 from './assets/videos/USPSA.mp4';
+import video2 from './assets/videos/WA State Championship 2025.mp4';
 
 function App() {
   // Create references to different sections of the page to allow scrolling to them
@@ -127,13 +128,16 @@ function App() {
 
       <p className="small-text bold-text profile-text">
         Hi! My name is Weronika Golden. I’m a software engineering student at Arizona State University, with a
-        passion for developing software solutions and solving problems using technology.
+        passion for developing software solutions and solving problems!
 
-        I have experience in Java, C, Python, and SQL. I’ve also worked on various database management systems,
-        and in my free time, I work on personal projects!
+        I have experience in various programming languages, working successfully in teams, and software design.
+        I also have experience in training and leadership from previous jobs! In my free time,
+        I work on personal projects to expand my skill-set. I recently finished building my
+        Connect4 game that was a lot of fun, and soon I will start on another project called
+        "DeployWatch" a project that demonstrates automated software deployment and real-time
+        monitoring in a cloud environment.
 
-        I love exploring new technologies and working on challenging projects that allow me to expand my skill
-        set.
+        I love exploring new technologies and working on challenging projects that allow me to grow and gain more experience.
       </p>
 
       {/* Modal */}
@@ -172,8 +176,7 @@ function App() {
         </p>
         <p className="small-text bold-text">
           I'm originally from Chicago. I grew up there, and lived in the Suburbs (Carol Stream, IL) until my husband and
-          I moved
-          to Ogden, Utah. We lived there for about 4 years, and we are now living in Post Falls, ID with our
+          I moved to Ogden, Utah. We lived there for about 4 years, and we are now living in Post Falls, ID with our
           3 beloved cats.
         </p>
         <p className="small-text bold-text">
@@ -211,6 +214,7 @@ function App() {
           <img src={photo7} alt="Our Three Cats!" className="clickable-image square-photo"/>
           <img src={photo8} alt="Green Knit Sweater I made" className="clickable-image square-photo"/>
           <img src={photo9} alt="Blue Purl Knit Crop-top Sweater I made" className="clickable-image square-photo"/>
+          <img src={photo10} alt="First attempt at cable stitch knitting!" className="clickable-image square-photo"/>
         </div>
         <button className="return-button" onClick={scrollToTop}>Return to Top</button>
       </section>
