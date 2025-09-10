@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/about-me-page/static/css/main.f6210f5a.css",
-    "main.js": "/about-me-page/static/js/main.8215f6ad.js",
+    "main.js": "/about-me-page/static/js/main.809ca144.js",
     "static/js/453.33be827d.chunk.js": "/about-me-page/static/js/453.33be827d.chunk.js",
-    "static/media/WA State Championship 2025.mp4": "/about-me-page/static/media/WA State Championship 2025.00edea8ce8ed1086dc2e.mp4",
+    "static/media/walk_shoot.mp4": "/about-me-page/static/media/walk_shoot.35d0839f657c8f89e4d0.mp4",
     "static/media/IMG_20220817_162247.jpg": "/about-me-page/static/media/IMG_20220817_162247.5da3efba469dff3bc0f7.jpg",
     "static/media/20230817_160651.jpg": "/about-me-page/static/media/20230817_160651.4f7789de185cfccc6f6d.jpg",
     "static/media/steel.mp4": "/about-me-page/static/media/steel.f8134b8d5df893310851.mp4",
@@ -11,20 +11,22 @@
     "static/media/20240627_105335.jpg": "/about-me-page/static/media/20240627_105335.1ec79e4f398efe4e2276.jpg",
     "static/media/IMG_20230129_193537.jpg": "/about-me-page/static/media/IMG_20230129_193537.38875abf38076766caea.jpg",
     "static/media/BlueKnitSweater.jpg": "/about-me-page/static/media/BlueKnitSweater.372c70c4f1d24e0c4482.jpg",
+    "static/media/baby_buffalo.jpg": "/about-me-page/static/media/baby_buffalo.e3dcacc1e4f5204e756b.jpg",
     "static/media/GreenKnitSweater.jpg": "/about-me-page/static/media/GreenKnitSweater.f066ce8e18d6ba51c8d2.jpg",
     "static/media/IMG_20230129_193532.jpg": "/about-me-page/static/media/IMG_20230129_193532.aafb51ccaf5c0ddca9a9.jpg",
     "static/media/video-thumbnail1.jpg": "/about-me-page/static/media/video-thumbnail1.7235fd75f729d65fcb9f.jpg",
     "static/media/SunDown.jpg": "/about-me-page/static/media/SunDown.84117da6c3380a4ce1ad.jpg",
-    "static/media/video-thumbnail3.jpg": "/about-me-page/static/media/video-thumbnail3.bc0e06a45a917516b964.jpg",
+    "static/media/video-thumbnail3.jpg": "/about-me-page/static/media/video-thumbnail3.f75bf9a16b73c39d7549.jpg",
     "static/media/CableSweater.jpg": "/about-me-page/static/media/CableSweater.03af636689934fc4c20e.jpg",
+    "static/media/night_tetons.jpg": "/about-me-page/static/media/night_tetons.75393c0bb2cd931176fb.jpg",
     "static/media/Weronika.jpg": "/about-me-page/static/media/Weronika.15e3db49d6818031db70.jpg",
     "index.html": "/about-me-page/index.html",
     "main.f6210f5a.css.map": "/about-me-page/static/css/main.f6210f5a.css.map",
-    "main.8215f6ad.js.map": "/about-me-page/static/js/main.8215f6ad.js.map",
+    "main.809ca144.js.map": "/about-me-page/static/js/main.809ca144.js.map",
     "453.33be827d.chunk.js.map": "/about-me-page/static/js/453.33be827d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f6210f5a.css",
-    "static/js/main.8215f6ad.js"
+    "static/js/main.809ca144.js"
   ]
 }
