@@ -12,6 +12,9 @@ import photo7 from './assets/images/20240627_105335.jpg';
 import photo8 from './assets/images/GreenKnitSweater.jpg';
 import photo9 from './assets/images/BlueKnitSweater.jpg';
 import photo10 from './assets/images/CableSweater.jpg';
+import photo11 from './assets/images/night_tetons.jpg';
+import photo12 from './assets/images/baby_buffalo.jpg';
+
 
 // Import video thumbnails
 import thumb1 from './assets/images/video-thumbnail1.jpg';
@@ -19,7 +22,7 @@ import thumb2 from './assets/images/video-thumbnail3.jpg';
 
 // Import videos
 import video1 from './assets/videos/steel.mp4';
-import video2 from './assets/videos/WA State Championship 2025.mp4';
+import video2 from './assets/videos/walk_shoot.mp4';
 
 function App() {
   // Create references to different sections of the page to allow scrolling to them
@@ -215,6 +218,8 @@ function App() {
           <img src={photo8} alt="Green Knit Sweater I made" className="clickable-image square-photo"/>
           <img src={photo9} alt="Blue Purl Knit Crop-top Sweater I made" className="clickable-image square-photo"/>
           <img src={photo10} alt="First attempt at cable stitch knitting!" className="clickable-image square-photo"/>
+          <img src={photo11} alt="Stargazing at the tetons" className="clickable-image square-photo"/>
+          <img src={photo12} alt="Cute little baby buffalo!" className="clickable-image square-photo"/>
         </div>
         <button className="return-button" onClick={scrollToTop}>Return to Top</button>
       </section>
