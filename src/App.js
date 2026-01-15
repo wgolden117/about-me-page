@@ -129,21 +129,36 @@ function App() {
       <h1 className="kalnia-glaze-header">About Me</h1>
       <img src={profilePhoto} alt="Weronika Golden" className="profile-photo"/>
 
-      <p className="small-text bold-text profile-text">
-        Hi! My name is Weronika Golden. I’m a software engineering student at Arizona State University, with a
-        passion for developing software solutions and solving problems!
+        <div className="profile-box">
+            <p className="small-text bold-text">
+                Hi! My name is Weronika Golden, and I’m a software engineering student at Arizona State University
+                graduating in May 2026. I’m passionate about building reliable, well-designed software systems and solving
+                real-world problems through thoughtful engineering.
+            </p>
 
-        I have experience in various programming languages, working successfully in teams, and software design.
-        I also have experience in training and leadership from previous jobs! In my free time,
-        I work on personal projects to expand my skill-set. I recently finished building my
-        Connect4 game that was a lot of fun, and soon I will start on another project called
-        "DeployWatch" a project that demonstrates automated software deployment and real-time
-        monitoring in a cloud environment.
+            <p className="small-text bold-text">
+                I’ve led and collaborated on projects that emphasize correctness, maintainability, and scalability.
+                Most recently, I served as the team lead for my senior capstone project, where I worked closely with teammates
+                to design and build a full-stack application that delivers adaptive, step-by-step feedback to students.
+                I enjoy translating complex requirements into clean, modular systems and guiding projects from initial design
+                through implementation.
+            </p>
 
-        I love exploring new technologies and working on challenging projects that allow me to grow and gain more experience.
-      </p>
+            <p className="small-text bold-text">
+                Outside of coursework, I build personal projects to challenge myself and explore system-level thinking.
+                One of my current projects, TransitFlow, is a freight ETA simulation and prediction engine that models
+                multi-leg shipment movement and timing constraints to produce more realistic delivery estimates.
+                I enjoy working on backend logic, edge cases, and architectural decisions that mirror real production environments.
+            </p>
 
-      {/* Modal */}
+            <p className="small-text bold-text">
+                I love learning new technologies, taking ownership of my work, and tackling projects that push me to
+                grow as an engineer. I’m especially drawn to work that values quality, clear design, and long-term reliability.
+            </p>
+        </div>
+
+
+        {/* Modal */}
       <div id="imageModal" className="modal">
         <span className="close">&times;</span>
         <div className="modal-content-wrapper">
@@ -166,42 +181,52 @@ function App() {
 
       <div ref={bioRef} className="bio-section">
         <h1 className="section-title">Detailed Bio</h1>
-        <p className="small-text bold-text">
-          I first attended Arizona State University (ASU) in the Fall of 2016 after obtaining my
-          Associates Degree from my local Community College, the College of Dupage. I obtained
-          a BS in Criminology and Criminal Justice, graduating Summa Cum Laude in 2018!
-        </p>
-        <p className="small-text bold-text">
-          I worked full-time while obtaining my Associates and BS Degree, and for a period of time I even worked
-          multiple jobs while attending school. After graduating, I continued working in my current field, accounts
-          payable, and in
-          the following years, I also worked in human resources, customer service, reception, and sales.
-        </p>
-        <p className="small-text bold-text">
-          I'm originally from Chicago. I grew up there, and lived in the Suburbs (Carol Stream, IL) until my husband and
-          I moved to Ogden, Utah. We lived there for about 4 years, and we are now living in Post Falls, ID with our
-          3 beloved cats.
-        </p>
-        <p className="small-text bold-text">
-          Throughout my working career, I discovered a passion for programming, and made the decision to go back to
-          school. I am now working towards my second BS, this time in Software Engineering. I decided to work
-          towards a second BS instead of a Masters because the BS is accredited by the Fulton School of Engineering
-          with ASU (yes, I went to ASU again!) and my anticipated graduation date is May of 2026!
-        </p>
-        <p className="small-text bold-text">
-          My personal hobbies include competitive shooting as part of the United States Practical Shooting
-          Association (USPSA), snowboarding, playing the piano and violin, knitting, and gaming. I also love the
-          outdoors, love to camp and hike, and I absolutely love trying and eating delicious foods
-          from various cultures! My favorite so far, other than my native Polish foods, is Japanese cuisine as well a
-          delicious rare steak!
-          It's hard to choose a favorite hobby, I love spending my free time engaging in creative and fun tasks.
-          When I'm tired or have had a long day, I unwind by relaxing and watching my favorite movies or shows
-          and eating my favorite snacks!
-        </p>
-        <p className="small-text bold-text">
-          I hope you've enjoyed this About Me page as much as I enjoyed creating it! Thank you for taking the time
-          to read a little about my life!
-        </p>
+          <p className="small-text bold-text">
+              I first attended Arizona State University (ASU) in the Fall of 2016 after obtaining my Associate’s
+              Degree from my local community college, the College of DuPage. I earned my Bachelor’s degree in
+              Criminology and Criminal Justice, graduating Summa Cum Laude in 2018.
+          </p>
+
+          <p className="small-text bold-text">
+              During this time, I worked full-time while completing my Associate’s and Bachelor’s degrees, and for
+              a period of time, I worked multiple jobs while attending school. Balancing work and academics
+              taught me how to manage my time effectively, prioritize competing responsibilities, and understand
+              how much work I can take on while still performing at a high level without burning out. These
+              experiences helped me build strong self-discipline, adaptability, and a sustainable approach to
+              long-term productivity.
+          </p>
+
+          <p className="small-text bold-text">
+              After graduating, I continued working in accounts payable and later gained experience in human
+              resources, customer service, reception, and sales. Working across different roles strengthened my
+              communication skills, attention to detail, and ability to collaborate with people from a wide
+              range of backgrounds.
+          </p>
+
+          <p className="small-text bold-text">
+              I grew up in the suburbs of Chicago and lived there until my husband and I moved to Northern Utah.
+              We lived there for about four years, and we now reside in Northern Idaho with our three beloved cats.
+          </p>
+
+          <p className="small-text bold-text">
+              Throughout my professional career, I discovered a passion for programming and made the decision to
+              return to school. I am currently working toward my second Bachelor’s degree, this time in Software
+              Engineering at ASU. I chose to pursue a second BS rather than a Master’s degree because the program
+              is accredited by the Fulton Schools of Engineering and provides a strong foundation in core software
+              engineering principles. My anticipated graduation date is May 2026.
+          </p>
+
+          <p className="small-text bold-text">
+              Outside of work and academics, my hobbies include competitive shooting through the United States
+              Practical Shooting Association (USPSA), snowboarding, playing the piano and violin, knitting, and
+              gaming. I also love the outdoors and enjoy camping and hiking whenever I can. When I’ve had a long
+              day, I unwind by relaxing with my favorite movies or shows and enjoying good food and snacks.
+          </p>
+
+          <p className="small-text bold-text">
+              I hope you’ve enjoyed this About Me page as much as I enjoyed creating it. Thank you for taking the
+              time to read a little about my life!
+          </p>
         <button className="return-button" onClick={scrollToTop}>Return to Top</button>
       </div>
 

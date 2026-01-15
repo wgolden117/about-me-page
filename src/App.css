@@ -176,17 +176,6 @@ body {
   font-weight: bold;
 }
 
-.profile-text {
-  text-align: left; /* Align text to the left */
-  width: 80%; /* Set the width of the text block */
-  margin: 20px auto; /* Center the block horizontally within the page */
-  padding: 20px; /* Add padding inside the block */
-  background-color: rgba(255, 255, 255, 0.1); /* Optional: Add a subtle background for contrast */
-  color: whitesmoke; /* Keep text readable against the background */
-  line-height: 1.6; /* Improve line spacing for readability */
-  border-radius: 8px; /* Optional: Add rounded corners for a polished look */
-}
-
 .App-link {
   color: whitesmoke;
 }
@@ -242,6 +231,18 @@ body {
   font-weight: 400;
   font-style: normal;
 }
+
+.profile-box {
+    width: 80%;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: whitesmoke;
+    line-height: 1.6;
+    border-radius: 8px;
+    text-align: left;
+}
+
 .bio-section,
 .photos-section {
    text-align: justify; /* Align text to the left */
