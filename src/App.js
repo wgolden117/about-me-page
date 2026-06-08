@@ -270,9 +270,7 @@ function App() {
               the sole engineer behind GymOS — a multi-tenant SaaS platform for
               gym management that I'm designing and building from the ground up
               using Django, FastAPI, Next.js, PostgreSQL, Redis, and the
-              Anthropic Claude API. Every day I get to architect real systems,
-              make meaningful technical decisions, and ship software that solves
-              real problems!
+              Anthropic Claude API. The best part? I'm just getting started."
             </p>
 
             <p className="small-text bold-text">
