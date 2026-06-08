@@ -136,30 +136,32 @@ function App() {
 
           <div className="profile-box">
             <p className="small-text bold-text">
-              Hi! My name is Weronika Golden, and I’m a software engineering
-              student at Arizona State University graduating in May 2026. I’m
-              passionate about building reliable, well-designed software systems
-              and solving real-world problems through thoughtful engineering.
+              Hi! My name is Weronika Golden, and I'm a full-stack Software
+              Engineer and graduate of Arizona State University — 4.0 GPA, Summa
+              Cum Laude. I'm passionate about building reliable, well-designed
+              software systems and solving real-world problems through
+              thoughtful engineering.
             </p>
 
             <p className="small-text bold-text">
-              I’ve led and collaborated on projects that emphasize correctness,
-              maintainability, and scalability. Most recently, I served as the
-              team lead for my senior capstone project, where I worked closely
-              with teammates to design and build a full-stack application that
-              delivers adaptive, step-by-step feedback to students. I enjoy
-              translating complex requirements into clean, modular systems and
-              guiding projects from initial design through implementation.
+              I'm currently interning as a Software Developer at METY
+              Technology, contributing to a production AI-powered tutoring
+              platform alongside a talented cross-functional team. At the same
+              time, I'm the sole engineer behind GymOS — a multi-tenant SaaS
+              platform for gym management that I'm designing and building from
+              the ground up. Every day I get to make real architectural
+              decisions, integrate cutting-edge APIs, and ship software that
+              solves real problems for real users.
             </p>
 
             <p className="small-text bold-text">
-              Outside of coursework, I build personal projects to challenge
-              myself and explore system-level thinking. One of my current
-              projects, TransitFlow, is a freight ETA simulation and prediction
-              engine that models multi-leg shipment movement and timing
-              constraints to produce more realistic delivery estimates. I enjoy
-              working on backend logic, edge cases, and architectural decisions
-              that mirror real production environments.
+              I love diving deep into backend systems, API design, and AI
+              integration. I enjoy translating complex requirements into clean,
+              scalable solutions and taking full ownership of projects from
+              initial design all the way through production deployment. I'm
+              especially drawn to work at the intersection of AI and software
+              engineering — and I couldn't be more excited about what I'm
+              building right now.
             </p>
 
             <p className="small-text bold-text">
@@ -270,7 +272,7 @@ function App() {
               using Django, FastAPI, Next.js, PostgreSQL, Redis, and the
               Anthropic Claude API. Every day I get to architect real systems,
               make meaningful technical decisions, and ship software that solves
-              real problems — and I couldn't be more excited about what's ahead!
+              real problems!
             </p>
 
             <p className="small-text bold-text">
