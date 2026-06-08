@@ -14,6 +14,7 @@ import photo9 from "./assets/images/BlueKnitSweater.jpg";
 import photo10 from "./assets/images/CableSweater.jpg";
 import photo11 from "./assets/images/night_tetons.jpg";
 import photo12 from "./assets/images/baby_buffalo.jpg";
+import resume from "./assets/docs/WGolden_Resume.pdf";
 
 // Import video thumbnails
 import thumb1 from "./assets/images/video-thumbnail1.jpg";
@@ -206,6 +207,14 @@ function App() {
               rel="noopener noreferrer"
             >
               <button className="link-button">GitHub</button>
+            </a>
+            {/* Resume Link Button */}
+            <a /* Open resume in a new tab when clicked */
+              href={resume}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="link-button">Resume</button>
             </a>
           </div>
 
