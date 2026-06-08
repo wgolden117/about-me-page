@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/about-me-page/static/css/main.51b9dc12.css",
-    "main.js": "/about-me-page/static/js/main.9cdb09fd.js",
+    "main.js": "/about-me-page/static/js/main.7b639c92.js",
     "static/js/453.3292fa0f.chunk.js": "/about-me-page/static/js/453.3292fa0f.chunk.js",
     "static/media/walk_shoot.mp4": "/about-me-page/static/media/walk_shoot.35d0839f657c8f89e4d0.mp4",
     "static/media/IMG_20220817_162247.jpg": "/about-me-page/static/media/IMG_20220817_162247.5da3efba469dff3bc0f7.jpg",
@@ -14,6 +14,7 @@
     "static/media/baby_buffalo.jpg": "/about-me-page/static/media/baby_buffalo.e3dcacc1e4f5204e756b.jpg",
     "static/media/GreenKnitSweater.jpg": "/about-me-page/static/media/GreenKnitSweater.f066ce8e18d6ba51c8d2.jpg",
     "static/media/IMG_20230129_193532.jpg": "/about-me-page/static/media/IMG_20230129_193532.aafb51ccaf5c0ddca9a9.jpg",
+    "static/media/WGolden_Resume.pdf": "/about-me-page/static/media/WGolden_Resume.d7c8c0765be363a237e4.pdf",
     "static/media/video-thumbnail1.jpg": "/about-me-page/static/media/video-thumbnail1.7235fd75f729d65fcb9f.jpg",
     "static/media/SunDown.jpg": "/about-me-page/static/media/SunDown.84117da6c3380a4ce1ad.jpg",
     "static/media/video-thumbnail3.jpg": "/about-me-page/static/media/video-thumbnail3.f75bf9a16b73c39d7549.jpg",
@@ -22,11 +23,11 @@
     "static/media/Weronika.jpg": "/about-me-page/static/media/Weronika.15e3db49d6818031db70.jpg",
     "index.html": "/about-me-page/index.html",
     "main.51b9dc12.css.map": "/about-me-page/static/css/main.51b9dc12.css.map",
-    "main.9cdb09fd.js.map": "/about-me-page/static/js/main.9cdb09fd.js.map",
+    "main.7b639c92.js.map": "/about-me-page/static/js/main.7b639c92.js.map",
     "453.3292fa0f.chunk.js.map": "/about-me-page/static/js/453.3292fa0f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.51b9dc12.css",
-    "static/js/main.9cdb09fd.js"
+    "static/js/main.7b639c92.js"
   ]
 }
